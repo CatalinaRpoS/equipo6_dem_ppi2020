@@ -1,0 +1,96 @@
+body {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+#pantalla_1 {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-height: 100vh;
+}
+
+#pantalla_2 {
+  background-image: url(../images/wallpaper-2.png);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-height: 100vh;
+}
+#titulo_1 {
+  color: #f8ebe7;
+  font-size: calc(3rem + 5vw);
+  text-align: center;
+  font-family: Calligraffitti;
+  margin-top: 17.5vh;
+}
+#titulo_2 {
+  color: #f8ebe7;
+  font-size: calc(2rem + 4vw);
+  text-align: center;
+  font-family: Montserrat;
+  margin-top: 13vh;
+}
+
+#iniciar {
+  background-color: #a28089;
+  border: transparent;
+  border-radius: 50px;
+  color: white;
+  min-height: 7vh;
+  padding-left: 5vmin;
+  margin: 0.5vh;
+}
+#iniciar::placeholder {
+  color: #d7cdc9;
+}
+#iniciar::-webkit-placeholder {
+  color: #d7cdc9;
+}
+#iniciar::-moz-placeholder {
+  color: #d7cdc9;
+}
+#iniciar::-o-placeholder {
+  color: #d7cdc9;
+}
+
+.texto_1 {
+  color: #d7cdc9;
+}
+.texto_1:hover {
+  color: #d7cdc9;
+  text-decoration: none;
+}
+
+#button_1 {
+  border-radius: 50px;
+  background-color: #f96332;
+  min-height: 7vh;
+}
+#button_2 {
+  border-radius: 50px;
+  background-color: transparent;
+  min-height: 7vh;
+  border-color: #d7cdc9;
+}
+
+#text_2 {
+  text-align: right;
+}
+
+.nav_1 {
+  background-color: #ED6D44;
+  width: 100%;
+
+}
+
+#titulo_3 {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-family: Bilbo Swash Caps;
+}
+
