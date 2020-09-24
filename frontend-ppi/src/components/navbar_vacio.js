@@ -5,10 +5,10 @@ class NavbarVacio extends React.Component{
   render(){
     return(
       <div>
-            <nav className="nav_1 navbar navbar-expand ">
+            <nav className="nav_1 navbar navbar-expand">
               <h1 id="titulo_3">Alto Voltaje </h1>
             </nav>
-      </div>    
+      </div> 
     );
   }
 }
