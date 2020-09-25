@@ -9,11 +9,12 @@ class Cards1 extends React.Component{
           <div className="col">
             <br/>
           {Data.map(dato=>
-             <div className="card">
-             <div className="card-body">
+             <div>
+               <hr/>
               <p className="card-text">{dato.texto}</p>
+               <hr/>
               </div>
-             </div>)}
+            )}
           <br/>
           </div>
         </div>

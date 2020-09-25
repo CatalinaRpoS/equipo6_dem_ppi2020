@@ -8,9 +8,9 @@ class Footer1 extends React.Component{
         <footer className="page-footer">
           <div className="container-fluid">
           <div className="row">
-          <div className="col"><button type="submit" className="btn" id="button_2"><a className="texto_1" href="/iniciar-sesion">{this.props.btn1}</a></button></div>
+          <div className="col"><button type="submit" className="btn" id="button_2"><a className="texto_1" href="/registro">{this.props.btn1}</a></button></div>
           <div className="col"></div>
-          <div className="col"><button type="submit" className="btn" id="button_2"><a className="texto_1" href="/iniciar-sesion">{this.props.btn2}</a></button></div>
+          <div className="col"><button type="submit" className="btn" id="button_2"><a className="texto_1" href="/">{this.props.btn2}</a></button></div>
           </div>
           </div>
         </footer>

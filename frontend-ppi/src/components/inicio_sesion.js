@@ -3,7 +3,7 @@ import '../styles/styles.css';
 
 class InicioSesion extends React.Component{
     render(){
-        return(
+            return(
             <div className="container-fluid">
                 <form>
                 <div className="row">

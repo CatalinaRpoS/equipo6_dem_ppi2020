@@ -37,6 +37,7 @@ body {
 
 #iniciar {
   background-color: #a28089;
+  font-family: Montserrat;
   border: transparent;
   border-radius: 50px;
   color: white;
@@ -46,6 +47,7 @@ body {
 }
 #iniciar::placeholder {
   color: #d7cdc9;
+  font-family: Montserrat;
 }
 #iniciar::-webkit-placeholder {
   color: #d7cdc9;
@@ -59,6 +61,7 @@ body {
 
 .texto_1 {
   color: #d7cdc9;
+  font-family: Montserrat;
 }
 .texto_1:hover {
   color: #d7cdc9;
@@ -95,7 +98,7 @@ nav {
 
 .imagen{
   width: 100%;
-  max-height: 60vh;
+  max-height: 50vh;
 }
 
 .cont-imagen{
@@ -114,6 +117,7 @@ nav {
 
 .texto_abajo{
     position: absolute;
+    font-family: Montserrat;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
