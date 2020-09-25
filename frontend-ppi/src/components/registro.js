@@ -47,6 +47,7 @@ class Registro extends React.Component{
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                     <div className="col-md-6 col-sm-6 col-lg-6">
                     <button type="submit" className="btn w-100 " id="button_2"><a className="texto_1" href="/iniciar-sesion">Crear Cuenta</a></button>
+
                     </div>
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 </div>

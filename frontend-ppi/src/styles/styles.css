@@ -135,3 +135,40 @@ footer{
 .card-text{
   font-family: Montserrat;
 }
+
+#textarea_1{
+  background-color: transparent;
+  border-top: 1px #d7cdc9; 
+  border-left: 1px #d7cdc9; 
+  border-right: 1px #d7cdc9; 
+}
+
+#textarea_1::placeholder, #textarea_1{
+  color: #d7cdc9;
+  font-family: Montserrat;
+}
+
+.button_3{
+  font-family: Montserrat;
+  color:  #d7cdc9;
+}
+.button_3{
+  font-family: Montserrat;
+  color:  #d7cdc9;
+}
+.button_3{
+  font-family: Montserrat;
+  color:  #d7cdc9;
+}
+.button_3{
+  font-family: Montserrat;
+  color:  #d7cdc9;
+}
+.button_3{
+  font-family: Montserrat;
+  color:  #d7cdc9;
+}
+.button_3{
+  font-family: Montserrat;
+  color:  #d7cdc9;
+}

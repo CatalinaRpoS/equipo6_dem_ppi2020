@@ -6,6 +6,8 @@ import IniciarSesion from '../pages/IniciarSesion';
 import OlvidasteContraseña from '../pages/OlvidasteContraseña';
 import ConfiguraContraseña from '../pages/ConfiguraCont';
 import ContinuarSinCuenta from '../pages/ContinuarSinCuenta';
+import SoporteTecnico1 from '../pages/SoporteTecnico1';
+import Inicio from '../pages/Inicio';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route exact path="/olvidaste-contraseña" component={OlvidasteContraseña}/>
       <Route exact path="/configura-contraseña" component={ConfiguraContraseña}/>
       <Route exact path="/continuar-sin-cuenta" component={ContinuarSinCuenta}/>
+     <Route exact path="/soporte-tecnico-1" component={SoporteTecnico1}/>
+     <Route exact path="/inicio" component={Inicio}/>
     </Switch>
     </BrowserRouter>
   );

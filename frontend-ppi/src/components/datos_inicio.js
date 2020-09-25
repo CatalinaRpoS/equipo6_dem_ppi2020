@@ -31,14 +31,15 @@ class DatosInicio extends React.Component{
                 <div className="row">
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                     <div className="col-md-6 col-sm-6 col-lg-6">
-                    <button type="submit" className="btn w-100 " id="button_2"><a className="texto_1" href="/">{this.props.button}</a></button>
+                    <button type="submit" className="btn w-100 " id="button_2"><a className="texto_1" href="/inicio">{this.props.button}</a></button>
                     </div>
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 </div>
                 </form>
                 <br/>
                 <div className="row">
-                    <div className="col text-center"><a className="texto_1" href="/">{this.props.question2}</a></div>
+                    <div className="col text-center"><a className="texto_1" href="/soporte-tecnico-1">{this.props.question2}</a></div>
+
                 </div>
             </div>
         );
