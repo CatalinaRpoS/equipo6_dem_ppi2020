@@ -7,7 +7,7 @@ import DatosInicio from '../components/datos_inicio';
 class IniciarSesion extends React.Component{
     render(){
         return(
-          <div id="pantalla_2" style={{ backgroundImage: `url(${Foto2})` }}>
+          <div className="container-fluid" id="pantalla_2" style={{ backgroundImage: `url(${Foto2})` }}>
                <Titulo2 titulo="Inicia Sesión"/>
                <br/>
                <br/>

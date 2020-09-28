@@ -1,8 +1,17 @@
 import React from 'react';
 import '../styles/styles.css';
+import swal from 'sweetalert2';
 
 class NuevaContraseña extends React.Component{
     render(){
+        const crear=()=>{
+            swal.fire({
+                title: "¡Tu nueva contraseña fue creada de forma exitosa!",
+               icon: "success", 
+               confirmButtonText: "¡Entendido!",
+               confirmButtonColor: "#f96332"
+            })
+        }
         return(
             <div className="container-fluid">
                 <div className="row">
@@ -28,8 +37,11 @@ class NuevaContraseña extends React.Component{
                 <br/>
                 <div className="row">
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
-                    <div className="col-md-6 col-sm-6 col-lg-6">
-                    <button type="submit" className="btn w-100 " id="button_2"><a className="texto_1" href="/iniciar-sesion">¡Listo!</a></button>
+                    <div className="col">
+                    <button type="button" className="btn" onClick={()=>crear()} id="button_2"><span className="texto_1">¡Listo!</span></button>
+                    </div>
+                    <div className="col">
+                    <button type="button" className="btn float-right" id="button_2"><a className="texto_1" href="/iniciar-sesion">Iniciar Sesión</a></button>
                     </div>
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 </div>

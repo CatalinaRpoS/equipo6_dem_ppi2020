@@ -1,8 +1,17 @@
 import React from 'react';
 import '../styles/styles.css';
+import swal from 'sweetalert2';
 
 class Registro extends React.Component{
     render(){
+        const crearCuenta=()=>{
+            swal.fire({
+                title: "¡La cuenta fue creada de forma exitosa!",
+                icon: "success",
+                confirmButtonText: "¡Entendido!",
+                confirmButtonColor: "#f96332"
+            })
+        }
         return(
             <div className="container">
                 <form>
@@ -45,9 +54,11 @@ class Registro extends React.Component{
                 <br/>
                 <div className="row">
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
-                    <div className="col-md-6 col-sm-6 col-lg-6">
-                    <button type="submit" className="btn w-100 " id="button_2"><a className="texto_1" href="/iniciar-sesion">Crear Cuenta</a></button>
-
+                    <div className="col">
+                    <button type="button" className="btn" onClick={()=>crearCuenta()} id="button_2"><span className="texto_1">Crear Cuenta</span></button>
+                    </div>
+                    <div className="col">
+                    <button type="button" className="btn float-right" id="button_2"><a className="texto_1" href="/iniciar-sesion">Continuar</a></button>
                     </div>
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 </div>

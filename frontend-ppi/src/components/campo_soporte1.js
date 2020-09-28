@@ -1,8 +1,18 @@
 import React from "react";
 import "../styles/styles.css";
+import swal from 'sweetalert2';
 
 class CampoSoporte1 extends React.Component {
   render() {
+    const enviar=()=>{
+      swal.fire({
+          title: "¡Tu mensaje se envió correctamente!",
+          text: "Pronto nos estaremos comunicando contigo", 
+          icon: "success",
+          confirmButtonText: "¡Entendido!",
+          confirmButtonColor: "#f96332"
+      })
+  }
     return (
       <div className="container-fluid">
         <form>
@@ -43,7 +53,7 @@ class CampoSoporte1 extends React.Component {
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
           <div className="col-md-6 col-sm-6 col-lg-6">
-          <button type="submit" className="btn w-100" id="button_2"><span className="button_3">Enviar</span></button>
+          <button type="button" className="btn w-100" onClick={()=>enviar()} id="button_2"><span className="button_3">Enviar</span></button>
             </div>
             </div>
           <br/>
