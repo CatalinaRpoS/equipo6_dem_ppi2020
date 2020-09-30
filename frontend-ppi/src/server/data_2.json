@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "imagen": "https://lamenteesmaravillosa.com/wp-content/uploads/2015/10/familia.jpg",
+    "título": "¡Cuéntanos sobre tu familia y tu vivienda!",
+    "href": "/familia-y-vivienda"
+  },
+  {
+    "id": "2",
+    "imagen": "https://image.freepik.com/vector-gratis/conjunto-electrodomesticos-cocina_101903-1631.jpg",
+    "título": "¿Cómo haces uso de tus electrodomésticos?",
+    "href": "/electrodomesticos"
+  },
+  {
+    "id": "3",
+    "imagen": "https://image.freepik.com/vector-gratis/bulbo-energia-verde_888996.jpg",
+    "título": "¡Conoce tu consumo promedio de energía!",
+    "href": "/consumo-de-energia"
+  },
+  {
+    "id": "4",
+    "imagen": "https://image.freepik.com/free-vector/hand-saving-coins-piggybank-with-flat-design_23-2147641819.jpg",
+    "título": "¡Conoce las mejores estrategias de ahorro en tu hogar!",
+    "href": "/estrategias-ahorro"
+  }
+]

@@ -8,14 +8,15 @@ class InicioSesion extends React.Component{
                 <form>
                 <div className="row">
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
-                    <div className="col-md-6 col-sm-6 col-lg-6">
+                    <div className="divInputIco col-md-6 col-sm-6 col-lg-6">
                     <input type="email" className="form-control" id="iniciar" placeholder="Email"/>
                     </div>
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 </div>
+                <p></p>
                 <div className="row">
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
-                    <div className="col-md-6 col-sm-6 col-lg-6">
+                    <div className="divInputIco col-md-6 col-sm-6 col-lg-6">
                     <input type="password" className="form-control" id="iniciar" placeholder="Contraseña"/>
                     </div>
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
