@@ -44,22 +44,22 @@ class NavbarLleno extends React.Component {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link texto_1" href="/">
+                <a className="nav-link texto_1" href="/familia-y-vivienda">
                   FAMILIA Y VIVIENDA
                 </a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link texto_1" href="/">
+                <a className="nav-link texto_1" href="/electrodomesticos">
                   ELECTRODOMÉSTICOS Y TIEMPO
                 </a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link texto_1" href="/">
+                <a className="nav-link texto_1" href="/consumo-de-energia">
                   CONSUMO PROMEDIO DE ENERGÍA
                 </a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link texto_1" href="/">
+                <a className="nav-link texto_1" href="/estrategias-ahorro">
                   ESTRATEGIAS DE AHORRO EN EL HOGAR
                 </a>
               </li>

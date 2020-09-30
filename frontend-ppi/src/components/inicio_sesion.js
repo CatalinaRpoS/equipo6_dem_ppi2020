@@ -31,7 +31,7 @@ class InicioSesion extends React.Component{
                 <div className="row">
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                     <div className="col-md-6 col-sm-6 col-lg-6">
-                    <button type="submit" className="btn w-100 " id="button_1"><a className="texto_1" href="/inicio">Inicia sesión</a></button>
+                    <button type="button" className="btn w-100 " id="button_1"><a className="texto_1" href="/inicio">Inicia sesión</a></button>
                     </div>
                     <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 </div>

@@ -14,7 +14,7 @@ class Footer1 extends React.Component {
             <div className="row">
               <div className="col">
                 <button type="submit" className="btn" id="button_2">
-                  <a className="texto_1" href="/registro">
+                  <a className="texto_1" href={this.props.href1}>
                     {this.props.btn1}
                   </a>
                 </button>
@@ -22,8 +22,8 @@ class Footer1 extends React.Component {
               <div className="col"></div>
               <div className="col">
                 <button type="submit" className="btn" id="button_2">
-                  <a className="texto_1" href="/">
-                    {this.props.btn2}
+                  <a className="texto_1" href={this.props.href2}>
+                   {this.props.btn2}
                   </a>
                 </button>
               </div>

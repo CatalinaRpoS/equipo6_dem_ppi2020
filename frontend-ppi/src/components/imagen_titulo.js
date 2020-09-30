@@ -5,10 +5,14 @@ class ImagenTitulo extends React.Component{
   render(){
     return(
       <div>
-        <div className="cont-imagen">
-          <img src={this.props.imagen} className="imagen img-fluid img-responsive" alt=""/>
-         <div className="texto_arriba font-weight-bold">{this.props.texto}</div>
-         <div className="texto_abajo">{this.props.texto2}</div>
+        <div className="cont-imagen" style={{ backgroundImage: `url(${this.props.imagen})` }}>
+         <br/>
+         <div className="container-fluid">
+         <p className="texto_arriba text-center font-weight-bold">{this.props.texto}</p>
+         <br/>
+         <p className="texto_abajo text-center">{this.props.texto2}</p>
+        <br/> 
+         </div>
         </div>
       </div>
     );

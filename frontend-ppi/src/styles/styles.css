@@ -43,7 +43,6 @@ body {
   min-height: 7vh;
   padding-left: 5vmin;
   margin: 0.5vh;
-
 }
 #iniciar::placeholder {
   color: #d7cdc9;
@@ -128,26 +127,14 @@ nav {
   max-height: 50vh;
 }
 
-.cont-imagen {
-  position: relative;
-  text-align: center;
-}
-
 .texto_arriba {
-  position: absolute;
   font-family: Montserrat;
   color: white;
-  top: 20%;
   font-size: calc(1em + 2vw);
-  width: 100%;
 }
 
 .texto_abajo {
-  position: absolute;
   font-family: Montserrat;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   width: 100%;
 }
@@ -206,6 +193,10 @@ footer {
   background: #d8876d;
 }
 
+.cont-imagen {
+  background-size: cover;
+}
+
 .img_user {
   width: calc(5rem + 4vw);
 }
@@ -218,14 +209,23 @@ footer {
   width: calc(5rem + 4vw);
   height: calc(5rem + 4vw);
 }
-.divInputIco{
+
+.img_3 {
+  width: 100vw;
+  max-height: 60vh;
+}
+
+form{
+  font-family: Montserrat;
+}
+
+.divInputIco {
   background-image: url(https://image.flaticon.com/icons/png/512/310/310869.png);
   background-repeat: no-repeat;
   background-position: 4px center;
   background-size: 30px;
   background-color: #a28089;
-  background-color: #a28089;
-  padding-left: 32px;
+  padding-left: 35px;
   border-radius: 50px;
   max-width: 500px;
 }
