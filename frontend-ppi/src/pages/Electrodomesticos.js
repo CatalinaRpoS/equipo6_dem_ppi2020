@@ -1,8 +1,9 @@
 import React from "react";
 import NavbarLleno from "../components/navbar_lleno";
-import Electrodomesticos1 from "../images/electrodomesticos.jpg";
+import Electrodomesticos1 from "../images/imagen_electrodomesticos.png";
 import "../styles/styles.css";
-import Form2 from "../components/form_2"
+import Form2 from "../components/form_2";
+import Footer1 from "../components/footer_1";
 
 class Electrodomesticos extends React.Component {
   render() {
@@ -14,8 +15,14 @@ class Electrodomesticos extends React.Component {
           <br />
           ¿Cómo utilizas tus electrodomésticos?
         </h4>
-        <br/>
-        <Form2/>
+        <br />
+        <Form2 />
+        <Footer1
+          btn1="Inicio"
+          btn2="¡Listo!"
+          href1="/inicio"
+          href2="/consumo-de-energia"
+        />
       </div>
     );
   }

@@ -69,12 +69,12 @@ class NavbarLleno extends React.Component {
                 </a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link texto_1" href="/">
+                <a className="nav-link texto_1" href="/ajustes">
                   AJUSTES
                 </a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link texto_1" href="/">
+                <a className="nav-link texto_1" href="/soporte-tecnico-2">
                   SOPORTE TÉCNICO
                 </a>
               </li>

@@ -215,11 +215,11 @@ footer {
   max-height: 60vh;
 }
 
-form{
+form {
   font-family: Montserrat;
 }
 
-.divInputIco {
+/*.divInputIco {
   background-image: url(https://image.flaticon.com/icons/png/512/310/310869.png);
   background-repeat: no-repeat;
   background-position: 4px center;
@@ -229,3 +229,4 @@ form{
   border-radius: 50px;
   max-width: 500px;
 }
+*/
