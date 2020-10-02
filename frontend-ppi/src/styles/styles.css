@@ -102,6 +102,18 @@ table {
   border-color: #d7cdc9;
 }
 
+#input1 {
+  border-radius: 50px;
+}
+
+.selectBox {
+  border-radius: 50px;
+}
+#button_3 {
+  font-family: Montserrat;
+  color: white;
+}
+
 #text_2 {
   text-align: right;
 }
@@ -184,11 +196,17 @@ footer {
   font-family: Montserrat;
   color: #d7cdc9;
 }
-.button_3 {
+#button_3 {
   font-family: Montserrat;
-  color: #d7cdc9;
+  border-color: #212529;
+  border-radius: 50px;
+  color: #212529;
 }
 
+.button_transparente {
+  background-color: transparent;
+  border-color: transparent;
+}
 .identi {
   background: #d8876d;
 }
@@ -219,6 +237,23 @@ form {
   font-family: Montserrat;
 }
 
+#card_1 {
+  color: #ff3636;
+  font-size: calc(1rem + 4vw);
+}
+
+#card_2 {
+  color: #63da38;
+  font-size: calc(1rem + 4vw);
+}
+
+#card_tamaño {
+  max-height: calc(10rem + 12vw);
+}
+
+label {
+  font-family: Montserrat;
+}
 /*.divInputIco {
   background-image: url(https://image.flaticon.com/icons/png/512/310/310869.png);
   background-repeat: no-repeat;

@@ -52,7 +52,7 @@ class Form2 extends React.Component {
               <label for="input1">Lavadora</label>
               <input
                 type="number"
-                className="input_2 form-control"
+                className="form-control"
                 id="input1"
                 value="0"
               />

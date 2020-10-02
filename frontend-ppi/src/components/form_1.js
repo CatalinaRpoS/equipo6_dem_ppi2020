@@ -36,7 +36,7 @@ class Form1 extends React.Component {
                   ¿Qué tipo de vivienda tienes?
                 </label>
                 <select
-                  className="form-control rounded"
+                  className="form-control selectBox"
                   id="exampleFormControlSelect1"
                 >
                   <option className="rounded">Escoge una opción</option>
@@ -52,7 +52,7 @@ class Form1 extends React.Component {
                   ¿Cuál es tu estrato socioeconómico?
                 </label>
                 <select
-                  className="form-control rounded"
+                  className="form-control selectBox"
                   id="exampleFormControlSelect1"
                 >
                   <option className="rounded">Escoge una opción</option>
@@ -70,7 +70,7 @@ class Form1 extends React.Component {
                   ¿Cuántas personas viven en tu casa?
                 </label>
                 <select
-                  className="form-control rounded"
+                  className="form-control selectBox"
                   id="exampleFormControlSelect1"
                 >
                   <option className="rounded">Escoge una opción</option>

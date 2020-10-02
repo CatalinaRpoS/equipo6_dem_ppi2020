@@ -3,6 +3,7 @@ import NavbarLleno from "../components/navbar_lleno";
 import swal from "sweetalert2";
 import Ciudad from "../images/ciudad.jpg";
 import ConsumoPromedio from "../components/consumo_promedio";
+import Footer1 from "../components/footer_1";
 
 class ConsumoEnergia extends React.Component {
   render() {
@@ -29,6 +30,12 @@ class ConsumoEnergia extends React.Component {
         <br />
         <br />
         <ConsumoPromedio />
+        <br/>
+        <Footer1 
+          btn1="Inicio"
+          btn2="¡Entendido!"
+          href1="/inicio"
+          href2="/estrategias-ahorro"/>
       </div>
     );
   }

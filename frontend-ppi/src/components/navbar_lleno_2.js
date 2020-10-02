@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/styles.css";
 import Foto2 from "../images/wallpaper-2.png";
 
-class NavbarLleno extends React.Component {
+class NavbarLleno2 extends React.Component {
   render() {
     return (
       <div>
@@ -10,24 +10,11 @@ class NavbarLleno extends React.Component {
           class="navbar navbar-dark"
           style={{ backgroundImage: `url(${Foto2})` }}
         >
-          <a className="navbar-brand" href="/ajustes">
-            <svg
-              width="2em"
-              height="2em"
-              viewBox="0 0 16 16"
-              class="bi bi-nut"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M11.42 2H4.58L1.152 8l3.428 6h6.84l3.428-6-3.428-6zM4.58 1a1 1 0 0 0-.868.504l-3.429 6a1 1 0 0 0 0 .992l3.429 6A1 1 0 0 0 4.58 15h6.84a1 1 0 0 0 .868-.504l3.428-6a1 1 0 0 0 0-.992l-3.428-6A1 1 0 0 0 11.42 1H4.58z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M6.848 5.933a2.5 2.5 0 1 0 2.5 4.33 2.5 2.5 0 0 0-2.5-4.33zM5.067 9.848a3.5 3.5 0 1 1 6.062-3.5 3.5 3.5 0 0 1-6.062 3.5z"
-              />
-            </svg>
+          <a className="navbar-brand" href="/">
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-power" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z"/>
+          <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z"/>
+          </svg>
           </a>
           <h1 id="titulo_3">Alto Voltaje </h1>
           <button
@@ -92,4 +79,4 @@ class NavbarLleno extends React.Component {
   }
 }
 
-export default NavbarLleno;
+export default NavbarLleno2;

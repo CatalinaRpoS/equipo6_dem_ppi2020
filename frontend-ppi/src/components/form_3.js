@@ -34,7 +34,7 @@ class Form3 extends React.Component {
               <div class="form-group rounded">
                 <label for="exampleFormControlSelect1">Comuna</label>
                 <select
-                  className="form-control rounded"
+                  className="form-control selectBox"
                   id="exampleFormControlSelect1"
                 >
                   <option className="rounded">Escoge una opción</option>
@@ -60,6 +60,7 @@ class Form3 extends React.Component {
                   <option>Comuna 80 - San Antonio de Prado</option>
                   <option>Comuna 90 - Santa Elena</option>
                   <option>Comuna 99</option>
+                  <option>No aplica</option>
                 </select>
               </div>
               <br />
@@ -68,7 +69,7 @@ class Form3 extends React.Component {
                   Empresa prestadora de servicios públicos
                 </label>
                 <select
-                  className="form-control rounded"
+                  className="form-control selectBox"
                   id="exampleFormControlSelect1"
                 >
                   <option className="rounded">Escoge una opción</option>
@@ -82,7 +83,7 @@ class Form3 extends React.Component {
                   ¿Tu servicio de energía es prepago o pospago?
                 </label>
                 <select
-                  className="form-control rounded"
+                  className="form-control selectBox"
                   id="exampleFormControlSelect1"
                 >
                   <option className="rounded">Escoge una opción</option>

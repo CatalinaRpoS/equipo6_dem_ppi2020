@@ -14,7 +14,7 @@ import FamiliaVivienda2 from "../pages/FamiliaVivienda2";
 import SoporteTecnico2 from "../pages/SoporteTecnico2";
 import ConsumoEnergia from "../pages/ConsumoEnergia";
 import Ajustes from "../pages/Ajustes";
-
+import EstrategiasDeAhorro from "../pages/EstrategiasDeAhorro";
 function App() {
   return (
     <BrowserRouter>
@@ -49,6 +49,7 @@ function App() {
         <Route exact path="/soporte-tecnico-2" component={SoporteTecnico2} />
         <Route exact path="/consumo-de-energia" component={ConsumoEnergia} />
         <Route exact path="/ajustes" component={Ajustes} />
+        <Route exact path="/estrategias-ahorro" component={EstrategiasDeAhorro} />
       </Switch>
     </BrowserRouter>
   );
