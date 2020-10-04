@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "icono": "https://img.icons8.com/dusk/64/000000/singing-teacher.png",
+    "estrategia": "  Planifica muy bien las actividades que tienes que hacer en el día.",
+    "valor": "60"
+  },
+  {
+    "id": "2",
+    "icono": "https://img.icons8.com/dusk/64/000000/microwave.png",
+    "estrategia": "  No utilices el horno microondas para descongelar la comida.",
+    "valor": "60"
+  },
+  {
+    "id": "3",
+    "icono": "https://img.icons8.com/dusk/64/000000/multiple-devices.png",
+    "estrategia": "  No tengas tus dispositivos conectados a la energía más tiempo del que es necesario.",
+    "valor": "90"
+  },
+  {
+    "id": "4",
+    "icono": "https://img.icons8.com/dusk/64/000000/hair-dryer.png",
+    "estrategia": "  Evita el uso de la plancha y el secador de cabello.",
+    "valor": "90"
+  },
+  {
+    "id": "5",
+    "icono": "https://img.icons8.com/dusk/64/000000/family-clothes.png",
+    "estrategia": "  Aprovecha al máximo la luz del sol para secar la ropa, y evita el planchado.",
+    "valor": "120"
+  },
+  {
+    "id": "6",
+    "icono": "https://img.icons8.com/dusk/64/000000/reflector-bulb.png",
+    "estrategia": "  No dejes los bombillos de tu casa encendidos más del tiempo necesario.",
+    "valor": "120"
+  },
+  {
+    "id": "7",
+    "icono": "https://img.icons8.com/dusk/64/000000/fridge.png",
+    "estrategia": "  Verifica que la puerta de la nevera esté siempre bien cerrada.",
+    "valor": "150"
+  },
+  {
+    "id": "8",
+    "icono": "https://img.icons8.com/dusk/64/000000/tv-on.png",
+    "estrategia": "  No conectes o enciendas el televisor si no lo vas a utilizar.",
+    "valor": "150"
+  }
+]

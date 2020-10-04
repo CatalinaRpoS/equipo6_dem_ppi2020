@@ -1,19 +1,19 @@
 import React from "react";
 
-class Cards1 extends React.Component {
+class Cards2 extends React.Component {
   render() {
-    const { Data } = this.props;
+    const { Data3 } = this.props;
     return (
       <div className="container-fluid">
         <div className="row">
           <div className="col">
             <br />
-            {Data.map((dato) => (
+            {Data3.map((dato) => (
               <div class="alert alert-warning card-text" role="alert">
-                {dato.texto}
+                <img src={dato.icono} alt="Icono_estrategia" />
+                {dato.estrategia}
               </div>
             ))}
-            <br />
           </div>
         </div>
       </div>
@@ -21,4 +21,4 @@ class Cards1 extends React.Component {
   }
 }
 
-export default Cards1;
+export default Cards2;
