@@ -12,11 +12,11 @@ class NuevaContraseña extends React.Component {
           confirmButtonText: "¡Entendido!",
           confirmButtonColor: "#f96332"
         })
-       /* .then((resultado) => {
+        .then((resultado) => {
           if (resultado.value) {
-            location.href = "/iniciar-sesion";
+            window.location.href = "/iniciar-sesion";
           }
-        });*/
+        });
     };
     return (
       <div className="container-fluid">
@@ -32,7 +32,7 @@ class NuevaContraseña extends React.Component {
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-6 col-sm-6 col-lg-6">
               <input
-                type="email"
+                type="password"
                 className="form-control"
                 id="iniciar"
                 placeholder="Contraseña"

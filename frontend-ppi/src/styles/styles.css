@@ -265,6 +265,10 @@ form {
   max-height: calc(10rem + 12vw);
 }
 
+option {
+  font-family: Montserrat;
+}
+
 label {
   font-family: Montserrat;
 }

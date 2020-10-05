@@ -1,21 +1,20 @@
-import React from 'react';
-import '../styles/styles.css';
-import Titulo2 from '../components/titulo_2';
-import RecuperarContraseña from '../components/recuperar_contraseña';
+import React from "react";
+import "../styles/styles.css";
+import Titulo2 from "../components/titulo_2";
+import Registro from "../components/registro";
 import Foto2 from "../images/wallpaper-2.png";
 
-class OlvidasteContraseña extends React.Component{
-    render(){
-        return(
-          <div id="pantalla_2" style={{ backgroundImage: `url(${Foto2})` }}>
-               <Titulo2 titulo="¿Olvidaste tu Contraseña?"/>
-               <br/>
-               <br/>
-               <RecuperarContraseña/>
-
-            </div>
-        );
-    }
+class Registrarse extends React.Component {
+  render() {
+    return (
+      <div id="pantalla_2" style={{ backgroundImage: `url(${Foto2})` }}>
+        <Titulo2 titulo="Regístrate" />
+        <br />
+        <br />
+        <Registro />
+      </div>
+    );
+  }
 }
 
-export default OlvidasteContraseña;
+export default Registrarse;

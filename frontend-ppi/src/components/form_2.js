@@ -45,16 +45,16 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
               <label for="input1">Lavadora</label>
               <input
                 type="number"
-                className="form-control"
+                className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
           </div>
@@ -66,7 +66,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -75,7 +75,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
           </div>
@@ -87,7 +87,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -96,7 +96,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
           </div>
@@ -108,7 +108,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -117,7 +117,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
           </div>
@@ -129,7 +129,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -138,7 +138,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
           </div>
@@ -150,7 +150,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -159,7 +159,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
           </div>
@@ -173,7 +173,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -182,7 +182,7 @@ class Form2 extends React.Component {
                 type="number"
                 className="input_2 form-control"
                 id="input1"
-                value="0"
+                placeholder="0"
               />
             </div>
           </div>

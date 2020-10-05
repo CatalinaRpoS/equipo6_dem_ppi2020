@@ -13,11 +13,11 @@ class RecuperarContraseña extends React.Component {
           confirmButtonText: "¡Entendido!",
           confirmButtonColor: "#f96332"
         })
-        /*.then((resultado) => {
+        .then((resultado) => {
           if (resultado.value) {
-            location.href = "/configura-contraseña";
+            window.location.href = "/configura-contraseña";
           }
-        });*/
+        });
     };
     return (
       <div className="container-fluid">
