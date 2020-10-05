@@ -39,11 +39,11 @@ class IdentificadorUsuario2 extends React.Component {
           confirmButtonColor: "#f96332",
           cancelButtonColor: "#f96332"
         })
-        .then((resultado) => {
+       /* .then((resultado) => {
           if (resultado.value) {
             location.href = "/";
           }
-        });
+        });*/
     };
     return (
       <div className="identi justify-content-center">
