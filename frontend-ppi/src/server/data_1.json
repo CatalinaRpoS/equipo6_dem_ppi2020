@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "texto": "No dejes ningún electrodoméstico en modo stand-by."
+  },
+  {
+    "id": 2,
+   "texto": "Ilumina tu hogar con bombillos de bajo consumo o LED."
+  },
+  {
+    "id": 3,
+   "texto": "¡Aprovecha la luz natural! No cierres las cortinas antes del anochecer."
+  },
+  {
+    "id": 4,
+   "texto": "No dejes ningún bombillo encendido en tu casa si vas a salir."
+  }
+]
