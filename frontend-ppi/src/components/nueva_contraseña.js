@@ -12,11 +12,11 @@ class NuevaContraseña extends React.Component {
           confirmButtonText: "¡Entendido!",
           confirmButtonColor: "#f96332"
         })
-        .then((resultado) => {
+       /* .then((resultado) => {
           if (resultado.value) {
             location.href = "/iniciar-sesion";
           }
-        });
+        });*/
     };
     return (
       <div className="container-fluid">
