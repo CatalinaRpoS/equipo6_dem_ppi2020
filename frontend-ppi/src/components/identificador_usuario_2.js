@@ -5,28 +5,6 @@ import swal from "sweetalert2";
 
 class IdentificadorUsuario2 extends React.Component {
   render() {
-    const actualizar = () => {
-      swal
-        .fire({
-          title: "¿Estás seguro de actualizar tu información personal?",
-          icon: "warning",
-          confirmButtonText: "Sí",
-          cancelButtonText: "No",
-          showCancelButton: true,
-          confirmButtonColor: "#f96332",
-          cancelButtonColor: "#f96332"
-        })
-        .then((resultado) => {
-          if (resultado.value) {
-            swal.fire({
-              title: "¡Tu información personal fue actualizada correctamente!",
-              icon: "success",
-              confirmButtonText: "¡Entendido!",
-              confirmButtonColor: "#f96332"
-            });
-          }
-        });
-    };
     const eliminar = () => {
       swal
         .fire({

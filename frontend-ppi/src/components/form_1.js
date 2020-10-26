@@ -4,7 +4,8 @@ import swal from "sweetalert2";
 
 class Form1 extends React.Component {
   render() {
-    const guardar = () => {
+    const guardar = (event) => {
+      event.preventDefault();
       swal
         .fire({
           title: "¿Estás seguro de guardar esta información?",
@@ -28,7 +29,7 @@ class Form1 extends React.Component {
     };
     return (
       <div className="container-fluid">
-        <form>
+        <form onSubmit={guardar}>
           <div className="row">
             <div className="col">
               <div class="form-group rounded">
@@ -38,8 +39,9 @@ class Form1 extends React.Component {
                 <select
                   className="form-control selectBox"
                   id="exampleFormControlSelect1"
+                  required
                 >
-                  <option className="rounded">Escoge una opción</option>
+                  <option value="">Escoge una opción</option>
                   <option>Casa</option>
                   <option>Apartamento</option>
                   <option>Habitación</option>
@@ -54,8 +56,9 @@ class Form1 extends React.Component {
                 <select
                   className="form-control selectBox"
                   id="exampleFormControlSelect1"
+                  required
                 >
-                  <option className="rounded">Escoge una opción</option>
+                  <option value="">Escoge una opción</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -72,8 +75,9 @@ class Form1 extends React.Component {
                 <select
                   className="form-control selectBox"
                   id="exampleFormControlSelect1"
+                  required
                 >
-                  <option className="rounded">Escoge una opción</option>
+                  <option value="">Escoge una opción</option>
                   <option>Entre 1 y 5 personas</option>
                   <option>Entre 6 y 10 personas</option>
                   <option>Más de 11 personas</option>
@@ -84,12 +88,7 @@ class Form1 extends React.Component {
                 <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 <div className="col-md-6 col-sm-6 col-lg-6">
-                  <button
-                    onClick={() => guardar()}
-                    type="button"
-                    className="btn w-100"
-                    id="button_1"
-                  >
+                  <button type="submit" className="btn w-100" id="button_1">
                     <span className="texto_1">Guardar</span>
                   </button>
                 </div>

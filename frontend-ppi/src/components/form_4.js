@@ -1,7 +1,32 @@
 import React from "react";
+import "../styles/styles.css";
+import swal from "sweetalert2";
 
 class Form4 extends React.Component {
   render() {
+    const actualizar = (event) => {
+      event.preventDefault();
+      swal
+        .fire({
+          title: "¿Estás seguro de actualizar tu información personal?",
+          icon: "warning",
+          confirmButtonText: "Sí",
+          cancelButtonText: "No",
+          showCancelButton: true,
+          confirmButtonColor: "#f96332",
+          cancelButtonColor: "#f96332"
+        })
+        .then((resultado) => {
+          if (resultado.value) {
+            swal.fire({
+              title: "¡Tu información personal fue actualizada correctamente!",
+              icon: "success",
+              confirmButtonText: "¡Entendido!",
+              confirmButtonColor: "#f96332"
+            });
+          }
+        });
+    };
     return (
       <div className="container-fluid">
         <div className="row">
@@ -11,41 +36,60 @@ class Form4 extends React.Component {
               COMPLETAR INFORMACIÓN PERSONAL:
             </h4>
             <br />
-            <div className="col">
-              <label className="font-weight-bold" for="input1">
-                Fecha de nacimiento:
-              </label>
-              <input type="date" className="input_2 form-control" id="input1" />
-            </div>
-            <br />
-            <div className="col">
-              <label className="font-weight-bold" for="input1">
-                Género:
-              </label>
-              <select
-                className="form-control selectBox"
-                id="exampleFormControlSelect1"
-              >
-                <option>Escoge una opción</option>
-                <option>Masculino</option>
-                <option>Femenino</option>
-                <option>Otro</option>
-              </select>
-            </div>
-            <br />
-            <div className="col">
-              <label className="font-weight-bold" for="input1">
-                Ciudad de residencia:
-              </label>
-              <select
-                className="form-control selectBox"
-                id="exampleFormControlSelect1"
-              >
-                <option>Escoge una opción</option>
-                <option>Medellín</option>
-                <option>Otra</option>
-              </select>
-            </div>
+            <form onSubmit={actualizar}>
+              <div className="col">
+                <label className="font-weight-bold" for="input1">
+                  Fecha de nacimiento:
+                </label>
+                <input
+                  type="date"
+                  className="input_2 form-control"
+                  id="input1"
+                  required
+                />
+              </div>
+              <br />
+              <div className="col">
+                <label className="font-weight-bold" for="input1">
+                  Género:
+                </label>
+                <select
+                  className="form-control selectBox"
+                  id="exampleFormControlSelect1"
+                  required
+                >
+                  <option value="">Escoge una opción</option>
+                  <option>Masculino</option>
+                  <option>Femenino</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <br />
+              <div className="col">
+                <label className="font-weight-bold" for="input1">
+                  Ciudad de residencia:
+                </label>
+                <select
+                  className="form-control selectBox"
+                  id="exampleFormControlSelect1"
+                  required
+                >
+                  <option value="">Escoge una opción</option>
+                  <option>Medellín</option>
+                  <option>Otra</option>
+                </select>
+              </div>
+              <br />
+              <div className="row">
+                <div className="col-md-3 col-sm-3 col-lg-3"></div>
+                <div className="col-md-3 col-sm-3 col-lg-3"></div>
+                <div className="col-md-6 col-sm-6 col-lg-6">
+                  <button type="submit" className="btn w-100" id="button_1">
+                    <span className="texto_1">¡Listo!</span>
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
