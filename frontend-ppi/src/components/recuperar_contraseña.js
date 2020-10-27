@@ -4,7 +4,8 @@ import swal from "sweetalert2";
 
 class RecuperarContraseña extends React.Component {
   render() {
-    const confirmar = () => {
+    const confirmar = (event) => {
+      event.preventDefault();
       swal
         .fire({
           title: "¡Tu identidad se ha confirmado correctamente!",
@@ -29,7 +30,7 @@ class RecuperarContraseña extends React.Component {
             </p>
           </div>
         </div>
-        <form>
+        <form onSubmit={confirmar}>
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -38,6 +39,7 @@ class RecuperarContraseña extends React.Component {
                 className="form-control"
                 id="iniciar"
                 placeholder="Documento de identidad"
+                required
               />
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -50,6 +52,7 @@ class RecuperarContraseña extends React.Component {
                 className="form-control"
                 id="iniciar"
                 placeholder="Nombre"
+                required
               />
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -58,12 +61,7 @@ class RecuperarContraseña extends React.Component {
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col">
-              <button
-                type="button"
-                className="btn w-100"
-                onClick={() => confirmar()}
-                id="button_2"
-              >
+              <button type="submit" className="btn w-100" id="button_2">
                 <span className="texto_1">Confirmar</span>
               </button>
             </div>

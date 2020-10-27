@@ -4,7 +4,8 @@ import swal from "sweetalert2";
 
 class NuevaContraseña extends React.Component {
   render() {
-    const crear = () => {
+    const crear = (event) => {
+      event.preventDefault();
       swal
         .fire({
           title: "¡Tu nueva contraseña fue creada de forma exitosa!",
@@ -27,7 +28,7 @@ class NuevaContraseña extends React.Component {
             </p>
           </div>
         </div>
-        <form>
+        <form onSubmit={crear}>
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -36,6 +37,7 @@ class NuevaContraseña extends React.Component {
                 className="form-control"
                 id="iniciar"
                 placeholder="Contraseña"
+                required
               />
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -48,6 +50,7 @@ class NuevaContraseña extends React.Component {
                 className="form-control"
                 id="iniciar"
                 placeholder="Confirmar contraseña"
+                required
               />
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -56,12 +59,7 @@ class NuevaContraseña extends React.Component {
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col">
-              <button
-                type="button"
-                className="btn w-100"
-                onClick={() => crear()}
-                id="button_2"
-              >
+              <button type="submit" className="btn w-100" id="button_2">
                 <span className="texto_1">¡Listo!</span>
               </button>
             </div>
