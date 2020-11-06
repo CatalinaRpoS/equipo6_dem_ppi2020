@@ -1,20 +1,20 @@
 import React from "react";
 import "../styles/styles.css";
 import Titulo2 from "../components/titulo_2";
-import NuevaContrasena from "../components/nueva_contrasena";
+import RecuperarContrasena from "../components/recuperar_contrasena";
 import Foto2 from "../images/wallpaper-2.png";
 
-class ConfiguraContraseña extends React.Component {
+class OlvidasteContraseña extends React.Component {
   render() {
     return (
       <div id="pantalla_2" style={{ backgroundImage: `url(${Foto2})` }}>
-        <Titulo2 titulo="Configura tu Nueva Contraseña" />
+        <Titulo2 titulo="¿Olvidaste tu Contraseña?" />
         <br />
         <br />
-        <NuevaContrasena />
+        <RecuperarContrasena />
       </div>
     );
   }
 }
 
-export default ConfiguraContraseña;
+export default OlvidasteContraseña;

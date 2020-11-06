@@ -2,20 +2,21 @@ import React from "react";
 import "../styles/styles.css";
 import swal from "sweetalert2";
 
-class NuevaContraseña extends React.Component {
+class RecuperarContrasena extends React.Component {
   render() {
-    const crear = (event) => {
+    const confirmar = (event) => {
       event.preventDefault();
       swal
         .fire({
-          title: "¡Tu nueva contraseña fue creada de forma exitosa!",
+          title: "¡Tu identidad se ha confirmado correctamente!",
+          text: "Ahora puedes configurar una contraseña nueva",
           icon: "success",
           confirmButtonText: "¡Entendido!",
           confirmButtonColor: "#f96332"
         })
         .then((resultado) => {
           if (resultado.value) {
-            window.location.href = "/iniciar-sesion";
+            window.location.href = "/configura-contraseña";
           }
         });
     };
@@ -24,19 +25,20 @@ class NuevaContraseña extends React.Component {
         <div className="row">
           <div className="col text-center">
             <p className="texto_1">
-              Luego de este proceso, debes iniciar sesión nuevamente
+              Confírmanos tu identidad como usuario de Alto Voltaje y te
+              ayudaremos
             </p>
           </div>
         </div>
-        <form onSubmit={crear}>
+        <form onSubmit={confirmar}>
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-6 col-sm-6 col-lg-6">
               <input
-                type="password"
+                type="number"
                 className="form-control"
                 id="iniciar"
-                placeholder="Contraseña"
+                placeholder="Documento de identidad"
                 required
               />
             </div>
@@ -46,10 +48,10 @@ class NuevaContraseña extends React.Component {
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-6 col-sm-6 col-lg-6">
               <input
-                type="password"
+                type="text"
                 className="form-control"
                 id="iniciar"
-                placeholder="Confirmar contraseña"
+                placeholder="Nombre"
                 required
               />
             </div>
@@ -60,7 +62,7 @@ class NuevaContraseña extends React.Component {
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col">
               <button type="submit" className="btn w-100" id="button_2">
-                <span className="texto_1">¡Listo!</span>
+                <span className="texto_1">Confirmar</span>
               </button>
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -71,4 +73,4 @@ class NuevaContraseña extends React.Component {
   }
 }
 
-export default NuevaContraseña;
+export default RecuperarContrasena;
