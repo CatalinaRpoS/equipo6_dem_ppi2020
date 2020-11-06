@@ -4,7 +4,8 @@ import "../styles/styles.css";
 
 class Form2 extends React.Component {
   render() {
-    const guardar = () => {
+    const guardar = (event) => {
+      event.preventDefault();
       swal
         .fire({
           title: "¿Estás seguro de guardar esta información?",
@@ -35,7 +36,7 @@ class Form2 extends React.Component {
           familia y apegarte lo más posible a los gastos.
         </div>
         <br />
-        <form>
+        <form onSubmit={guardar}>
           <div className="row">
             <div className="col-md-6 col-sm-6 col-lg-6">
               <label for="input1">
@@ -46,6 +47,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -55,6 +57,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
           </div>
@@ -67,6 +70,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -76,6 +80,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
           </div>
@@ -88,6 +93,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -97,6 +103,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
           </div>
@@ -109,6 +116,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -118,6 +126,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
           </div>
@@ -130,6 +139,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -139,6 +149,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
           </div>
@@ -151,6 +162,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -160,6 +172,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
           </div>
@@ -174,6 +187,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
             <div className="col-md-6 col-sm-6 col-lg-6">
@@ -183,6 +197,7 @@ class Form2 extends React.Component {
                 className="input_2 form-control"
                 id="input1"
                 placeholder="0"
+                required
               />
             </div>
           </div>
@@ -191,12 +206,7 @@ class Form2 extends React.Component {
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-6 col-sm-6 col-lg-6">
-              <button
-                onClick={() => guardar()}
-                type="button"
-                className="btn w-100"
-                id="button_1"
-              >
+              <button type="submit" className="btn w-100" id="button_1">
                 <span className="texto_1">Guardar</span>
               </button>
             </div>

@@ -3,9 +3,13 @@ import "../styles/styles.css";
 
 class InicioSesion extends React.Component {
   render() {
+    const iniciarSesion = (event) => {
+      event.preventDefault();
+      window.location.href = "/inicio";
+    };
     return (
       <div className="container-fluid">
-        <form>
+        <form onSubmit={iniciarSesion}>
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="divInputIco col-md-6 col-sm-6 col-lg-6">
@@ -14,6 +18,7 @@ class InicioSesion extends React.Component {
                 className="form-control"
                 id="iniciar"
                 placeholder="Email"
+                required
               />
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -27,6 +32,7 @@ class InicioSesion extends React.Component {
                 className="form-control"
                 id="iniciar"
                 placeholder="Contraseña"
+                required
               />
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -45,10 +51,8 @@ class InicioSesion extends React.Component {
           <div className="row">
             <div className="col-md-3 col-sm-3 col-lg-3"></div>
             <div className="col-md-6 col-sm-6 col-lg-6">
-              <button type="button" className="btn w-100 " id="button_1">
-                <a className="texto_1" href="/inicio">
-                  Inicia sesión
-                </a>
+              <button type="submit" className="btn w-100 " id="button_1">
+                <span className="texto_1">Inicia sesión</span>
               </button>
             </div>
             <div className="col-md-3 col-sm-3 col-lg-3"></div>

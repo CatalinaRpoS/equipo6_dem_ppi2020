@@ -4,7 +4,8 @@ import swal from "sweetalert2";
 
 class Form3 extends React.Component {
   render() {
-    const guardar = () => {
+    const guardar = (event) => {
+      event.preventDefault();
       swal
         .fire({
           title: "¿Estás seguro de agregar esta información adicional?",
@@ -28,7 +29,7 @@ class Form3 extends React.Component {
     };
     return (
       <div className="container-fluid">
-        <form>
+        <form onSubmit={guardar}>
           <div className="row">
             <div className="col">
               <div class="form-group rounded">
@@ -36,8 +37,9 @@ class Form3 extends React.Component {
                 <select
                   className="form-control selectBox"
                   id="exampleFormControlSelect1"
+                  required
                 >
-                  <option className="rounded">Escoge una opción</option>
+                  <option value="">Escoge una opción</option>
                   <option>Comuna 1 - Popular</option>
                   <option>Comuna 2 - Santa Cruz</option>
                   <option>Comuna 3 - Manrique</option>
@@ -71,8 +73,9 @@ class Form3 extends React.Component {
                 <select
                   className="form-control selectBox"
                   id="exampleFormControlSelect1"
+                  required
                 >
-                  <option className="rounded">Escoge una opción</option>
+                  <option value="">Escoge una opción</option>
                   <option>EPM</option>
                   <option>Otra</option>
                 </select>
@@ -85,8 +88,9 @@ class Form3 extends React.Component {
                 <select
                   className="form-control selectBox"
                   id="exampleFormControlSelect1"
+                  required
                 >
-                  <option className="rounded">Escoge una opción</option>
+                  <option value="">Escoge una opción</option>
                   <option>Prepago - Recargas con tarjeta antes de usar</option>
                   <option>Pospago - Pagas con factura cada mes</option>
                 </select>
@@ -96,12 +100,7 @@ class Form3 extends React.Component {
                 <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 <div className="col-md-3 col-sm-3 col-lg-3"></div>
                 <div className="col-md-6 col-sm-6 col-lg-6">
-                  <button
-                    onClick={() => guardar()}
-                    type="button"
-                    className="btn w-100"
-                    id="button_1"
-                  >
+                  <button type="submit" className="btn w-100" id="button_1">
                     <span className="texto_1">Guardar</span>
                   </button>
                 </div>
