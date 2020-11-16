@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/styles.css";
 import swal from "sweetalert2";
 
-class Form1 extends React.Component {
-  render() {
+const Form1 =()=>{
     const guardar = (event) => {
       event.preventDefault();
       swal
@@ -100,6 +99,6 @@ class Form1 extends React.Component {
       </div>
     );
   }
-}
+
 
 export default Form1;

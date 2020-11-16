@@ -16,7 +16,7 @@ class RecuperarContrasena extends React.Component {
         })
         .then((resultado) => {
           if (resultado.value) {
-            window.location.href = "/configura-contraseña";
+            window.location.href = "/configura-contrasena";
           }
         });
     };

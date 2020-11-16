@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/styles.css";
 import Foto2 from "../images/wallpaper-2.png";
 
-class Footer1 extends React.Component {
-  render() {
+function Footer1 (props) {
     return (
       <div>
         <footer
@@ -14,16 +13,16 @@ class Footer1 extends React.Component {
             <div className="row">
               <div className="col">
                 <button type="submit" className="btn" id="button_2">
-                  <a className="texto_1" href={this.props.href1}>
-                    {this.props.btn1}
+                  <a className="texto_1" href={props.href1}>
+                    {props.btn1}
                   </a>
                 </button>
               </div>
               <div className="col"></div>
               <div className="col">
                 <button type="submit" className="btn" id="button_2">
-                  <a className="texto_1" href={this.props.href2}>
-                   {this.props.btn2}
+                  <a className="texto_1" href={props.href2}>
+                   {props.btn2}
                   </a>
                 </button>
               </div>
@@ -33,6 +32,6 @@ class Footer1 extends React.Component {
       </div>
     );
   }
-}
+
 
 export default Footer1;

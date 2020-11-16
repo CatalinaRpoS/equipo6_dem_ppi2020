@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Bienvenida from "../pages/Bienvenida";
 import Registrarse from "../pages/Registrarse";
 import IniciarSesion from "../pages/IniciarSesion";
-import OlvidasteContraseña from "../pages/OlvidasteContraseña";
-import ConfiguraContraseña from "../pages/ConfiguraCont";
+import OlvidasteContrasena from "../pages/OlvidasteContrasena";
+import ConfiguraContrasena from "../pages/ConfiguraCont";
 import ContinuarSinCuenta from "../pages/ContinuarSinCuenta";
 import SoporteTecnico1 from "../pages/SoporteTecnico1";
 import Inicio from "../pages/Inicio";
@@ -27,13 +27,13 @@ const App = () => {
         <Route exact path="/iniciar-sesion" component={IniciarSesion} />
         <Route
           exact
-          path="/olvidaste-contraseña"
-          component={OlvidasteContraseña}
+          path="/olvidaste-contrasena"
+          component={OlvidasteContrasena}
         />
         <Route
           exact
-          path="/configura-contraseña"
-          component={ConfiguraContraseña}
+          path="/configura-contrasena"
+          component={ConfiguraContrasena}
         />
         <Route
           exact
@@ -65,4 +65,3 @@ const App = () => {
 };
 
 export default App;
-

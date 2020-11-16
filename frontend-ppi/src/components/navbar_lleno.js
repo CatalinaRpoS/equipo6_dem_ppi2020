@@ -15,7 +15,7 @@ class NavbarLleno extends React.Component {
               width="2em"
               height="2em"
               viewBox="0 0 16 16"
-              class="bi bi-nut"
+              className="bi bi-nut"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -49,7 +49,7 @@ class NavbarLleno extends React.Component {
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    class="bi bi-heart"
+                    className="bi bi-heart"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -85,7 +85,7 @@ class NavbarLleno extends React.Component {
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    class="bi bi-pie-chart"
+                    className="bi bi-pie-chart"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -107,7 +107,7 @@ class NavbarLleno extends React.Component {
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    class="bi bi-calculator"
+                    className="bi bi-calculator"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -126,7 +126,7 @@ class NavbarLleno extends React.Component {
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    class="bi bi-person-circle"
+                    className="bi bi-person-circle"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
