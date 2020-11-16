@@ -9,7 +9,7 @@
   "routes": [
     { "src": "/test", "dest": "/index.js" },
     { "src": "/registro", "methods": ["POST", "GET", "PATCH", "PUT", "DELETE"], "dest": "/index.js"},
-    { "src": "/electrodomesticos", "methods": ["POST", "GET"], "dest": "/index.js"},
+    { "src": "/electrodomesticos/(?<id>[^/]+)", "methods": ["POST", "GET"], "dest": "/index.js"},
     { "src": "/ajustes/(?<id>[^/]+)", "methods": ["POST", "GET", "PATCH", "PUT", "DELETE"], "dest": "/index.js" }
   ]
 }
