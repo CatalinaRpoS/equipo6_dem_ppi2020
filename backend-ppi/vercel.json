@@ -8,7 +8,7 @@
   ],
   "routes": [
     { "src": "/test", "dest": "/index.js" },
-    { "src": "/registro", "methods": ["POST", "GET", "PATCH", "PUT", "DELETE"], "dest": "/api/user.js"}
+    { "src": "/registro", "methods": ["POST", "GET", "PATCH", "PUT", "DELETE"], "dest": "/index.js"},
     { "src": "/ajustes/(?<id>[^/]+)", "methods": ["POST", "GET", "PATCH", "PUT", "DELETE"], "dest": "/index.js" }
   ]
 }
