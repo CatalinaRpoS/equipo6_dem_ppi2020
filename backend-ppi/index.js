@@ -24,12 +24,12 @@ app.use((req, res, next) => {
 });
 
 // Routes //
-app.use("/api", ajustes);
-app.use("/api", registro);
+app.use(ajustes);
+app.use(registro);
 // app.use("/api", contrasena);
 // app.use("/api", familiaviv);
 // app.use("/api", iniciosesion);
-app.use("/api", electrodomesticos);
+app.use(electrodomesticos);
 
 // Ajustes del servidor
 app.listen(app.get("port"), () => {
