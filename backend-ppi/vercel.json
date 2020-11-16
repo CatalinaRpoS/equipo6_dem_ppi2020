@@ -8,6 +8,7 @@
   ],
   "routes": [
     { "src": "/test", "dest": "/index.js" },
+    { "src": "/registro", "dest": "/index.js" },
     { "src": "/ajustes/(?<id>[^/]+)", "dest": "/index.js" }
   ]
 }
