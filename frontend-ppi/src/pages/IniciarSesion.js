@@ -19,7 +19,7 @@ class IniciarSesion extends React.Component {
         <DatosInicio
           input1="Email"
           input2="Contraseña"
-          question1="¿Olvidaste tu contraseñas?"
+          question1="¿Olvidaste tu contraseña?"
           button="Continuar"
           question2="Soporte Técnico"
         />

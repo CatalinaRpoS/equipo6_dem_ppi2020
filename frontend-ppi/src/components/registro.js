@@ -4,6 +4,7 @@ import swal from "sweetalert2";
 //import { event } from "jquery";
 import axios from "axios";
 import { saveToLocal } from "../functions/localStorage";
+import sha1 from "sha1";
 
 const Registro = () => {
   const [userData, setUserData] = useState({});
@@ -21,8 +22,8 @@ const Registro = () => {
     event.preventDefault();
 
     const { contrasena, contrasena2 } = userData;
-
     if (contrasena.length < 8) {
+      //if (contrasena.length < 8) {
       swal.fire({
         title: "La contraseña es muy corta :(",
         icon: "error",
@@ -33,7 +34,12 @@ const Registro = () => {
       if (contrasena === contrasena2) {
         //ENVIAR LOS DATOS PARA LA BASE DE DATOS EN ESTE BLOQUE
         axios
-          .post("https://db1bo.sse.codesandbox.io/registro", { userData })
+          .post("https://ygfev.sse.codesandbox.io/registro", {
+            documento: userData.documento,
+            nombre: userData.nombre,
+            email: userData.email,
+            contrasena: sha1(userData.contrasena)
+          })
           .then((res) => {
             console.log(res);
             const { insertId } = res.data.results;
@@ -63,7 +69,7 @@ const Registro = () => {
         });
       }
     }
-  }  
+  }
 
   return (
     <div className="container">

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "../styles/styles.css";
 import axios from "axios";
 import swal from "sweetalert2";
-import { saveToLocal } from '../functions/localStorage';
+import { saveToLocal } from "../functions/localStorage";
+import sha1 from 'sha1';
 
 const InicioSesion = () => {
   const [loginData, setLoginData] = useState({});
@@ -18,11 +19,9 @@ const InicioSesion = () => {
   const iniciarSesion = (event) => {
     event.preventDefault();
     axios
-      .post("https://db1bo.sse.codesandbox.io/iniciar-sesion", { loginData })
+      .post("https://ygfev.sse.codesandbox.io/iniciar-sesion", { email: loginData.email, contrasena:sha1(loginData.contrasena) })
       .then((res) => {
         console.log(res);
-        const { Id_usuario } = res.data.rows[0];
-        saveToLocal("id", Id_usuario);
         if (res.data.message === "Info incorrecta") {
           swal.fire({
             title: "Correo y/o contraseña incorrectos",
@@ -31,7 +30,9 @@ const InicioSesion = () => {
             confirmButtonColor: "#f96332"
           });
         } else {
-          //window.location.href = "/inicio";
+          const { Id_usuario } = res.data.rows[0];
+          saveToLocal("id", Id_usuario);
+          window.location.href = "/inicio";
         }
       });
   };

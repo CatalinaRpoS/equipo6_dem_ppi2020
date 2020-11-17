@@ -6,9 +6,8 @@ import Axios from "axios";
 import { getFromLocal } from "../functions/localStorage";
 
 const IdentificadorUsuario2 = () => {
-
   const [infoUsuario, setInfoUsuario] = useState({
-    Documento: "Cargando",
+    Documento: 0,
     Nombre: "Cargando",
     Email: "Cargando",
     Contrasena: "Cargando"
@@ -21,7 +20,7 @@ const IdentificadorUsuario2 = () => {
   function obtenerInfoUsuario() {
     const id = getFromLocal("id");
     if (id) {
-      Axios.get(`https://db1bo.sse.codesandbox.io/ajustes/${id}`).then(
+      Axios.get(`https://ygfev.sse.codesandbox.io/ajustes/${id}`).then(
         (response) => {
           let info = response.data[0];
           setInfoUsuario(info);
@@ -44,7 +43,14 @@ const IdentificadorUsuario2 = () => {
       })
       .then((resultado) => {
         if (resultado.value) {
-          window.location.href = "/";
+          const id = getFromLocal("id");
+          if (id) {
+            Axios.delete(`https://ygfev.sse.codesandbox.io/ajustes/${id}`).then(
+              (response) => {
+                window.location.href = "/";
+              }
+            );
+          }
         }
       });
   };

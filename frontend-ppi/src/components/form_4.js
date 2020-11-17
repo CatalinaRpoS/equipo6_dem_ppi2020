@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../styles/styles.css";
 import swal from "sweetalert2";
+import axios from "axios";
+import { getFromLocal } from "../functions/localStorage";
 
 const Form4 = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -29,12 +31,22 @@ const Form4 = () => {
       })
       .then((resultado) => {
         if (resultado.value) {
-          swal.fire({
-            title: "¡Tu información personal fue actualizada correctamente!",
-            icon: "success",
-            confirmButtonText: "¡Entendido!",
-            confirmButtonColor: "#f96332"
-          });
+          const id = getFromLocal("id");
+          if (id) {
+            axios
+              .patch(`https://ygfev.sse.codesandbox.io/ajustes/${id}`, {
+                userInfo
+              })
+              .then((res) => {
+                swal.fire({
+                  title:
+                    "¡Tu información personal fue actualizada correctamente!",
+                  icon: "success",
+                  confirmButtonText: "¡Entendido!",
+                  confirmButtonColor: "#f96332"
+                });
+              });
+          }
         }
       });
   };
@@ -53,7 +65,7 @@ const Form4 = () => {
                 Fecha de nacimiento:
               </label>
               <input
-                name="Fecha_de_nacimiento"
+                name="fecha_nacimiento"
                 type="date"
                 className="input_2 form-control"
                 id="input1"
@@ -67,7 +79,7 @@ const Form4 = () => {
                 Género:
               </label>
               <select
-                name="Genero"
+                name="genero"
                 className="form-control selectBox"
                 id="exampleFormControlSelect1"
                 required
@@ -85,7 +97,7 @@ const Form4 = () => {
                 Ciudad de residencia:
               </label>
               <select
-                name="Ciudad"
+                name="ciudad_residencia"
                 className="form-control selectBox"
                 id="exampleFormControlSelect1"
                 required

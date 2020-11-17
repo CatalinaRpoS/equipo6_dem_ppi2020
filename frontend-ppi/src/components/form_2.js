@@ -47,7 +47,7 @@ const Form2 = (props) => {
         if (resultado.value) {
           const id = getFromLocal("id");
           axios
-            .post(`https://backend.vercel.app/electrodomesticos/${id}`, {
+            .post(`https://ygfev.sse.codesandbox.io/${id}`, {
               electrodomesticos
             })
             .then((res) => {
