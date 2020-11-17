@@ -5,14 +5,15 @@ const mysqlConnection = require("../db/db");
 
 // Crear nueva cuenta
 router.post("/registro", (req, res) => {
-  const { documento, nombre, email, contrasena } = req.body;
+  const { documento, nombre, email, contrasena } = req.body.userData;
   mysqlConnection.query(
-    `INSERT INTO Usuario(Documento, Nombre, Email, Contrasena) VALUES(${documento}, ${nombre}, ${email}, ${contrasena})`,
+    `INSERT INTO Usuarios(Documento, Nombre, Email, Contrasena) VALUES('${documento}', '${nombre}', '${email}', '${contrasena}');`,
     (err, results, fields) => {
       if (err) {
+        res.json({ message: `¡Error al crear la cuenta!` });
         return console.error(err.message);
       }
-      res.json({ message: `¡Cuenta creada!` });
+      res.json({ message: "¡Cuenta creada!", results });
     }
   );
 });

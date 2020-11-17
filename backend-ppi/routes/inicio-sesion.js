@@ -5,17 +5,34 @@ const mysqlConnection = require("../db/db");
 
 // Iniciar sesión en Alto Voltaje
 router.post("/iniciar-sesion", (req, res) => {
-  const { email, contrasena } = req.body;
+  const { email, contrasena } = req.body.loginData;
   mysqlConnection.query(
-    `SELECT * FROM Usuarios WHERE Email='${email} AND Contrasena='${contrasena};'`,
-    (err, rows, fields) => {
-      if (!err) {
-        res.json({ message: "¡Bienvenido a la experiencia personalizada!" });
+    `SELECT * FROM Usuarios WHERE Email='${email}' AND Contrasena='${contrasena}'`,
+    (err, rows, results) => {
+      if (err) {
+        res.json({ message: `Error` });
+        return console.log(err.message);
+      }
+      if (rows.length > 0) {
+        res.json({ message: `Bienvenido`, rows });
       } else {
         res.json({
-          message:
-            "¡Correo y/o contraseña incorrectos! Por favor, intenta nuevamente"
+          message: `Info incorrecta`
         });
+      }
+    }
+  );
+});
+
+router.get("/inicio/:id", (req, res) => {
+  const { id } = req.params;
+  mysqlConnection.query(
+    `SELECT Nombre FROM Usuarios WHERE Id_usuario=${id}`,
+    (err, rows, fields) => {
+      if (!err) {
+        res.json(rows);
+      } else {
+        console.log(err);
       }
     }
   );

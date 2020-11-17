@@ -3,14 +3,14 @@ const app = express();
 const cors = require("cors");
 const ajustes = require("./routes/ajustes");
 const registro = require("./routes/registro");
-// const contrasena = require("../routes/contrasena");
-// const familiaviv = require("../routes/familia-y-vivienda");
-// const iniciosesion = require("../routes/inicio-sesion");
+const contrasena = require("./routes/contrasena");
+// const familiaviv = require("./routes/familia-y-vivienda");
+const iniciosesion = require("./routes/inicio-sesion");
 const electrodomesticos = require("./routes/electrodomesticos");
 const test = require("./routes/test");
 
 // Ajustes
-app.set("port", process.env.PORT || 5000);
+app.set("port", process.env.PORT || 4005);
 
 // Middlewares
 app.use(cors()); //ayuda a evitar bloqueos HTTPS (CORS)
@@ -26,9 +26,9 @@ app.use((req, res, next) => {
 // Routes //
 app.use(ajustes);
 app.use(registro);
-// app.use("/api", contrasena);
+app.use(contrasena);
 // app.use("/api", familiaviv);
-// app.use("/api", iniciosesion);
+app.use(iniciosesion);
 app.use(electrodomesticos);
 
 // Ajustes del servidor

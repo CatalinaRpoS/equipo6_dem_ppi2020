@@ -8,7 +8,7 @@ ajustes de la cuenta */
 router.get("/ajustes/:id", (req, res) => {
   const { id } = req.params;
   mysqlConnection.query(
-    `SELECT Documento, Nombre, Email, Contrasena AS 'Contraseña' FROM Usuarios WHERE Id_usuario=${id}`,
+    `SELECT Documento, Nombre, Email, Contrasena FROM Usuarios WHERE Id_usuario=${id}`,
     (err, rows, fields) => {
       if (!err) {
         res.json(rows);
