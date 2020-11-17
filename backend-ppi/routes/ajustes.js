@@ -22,10 +22,10 @@ router.get("/ajustes/:id", (req, res) => {
 /* Actualizar la información personal del usuario
 en los ajustes de la cuenta */
 router.patch("/ajustes/:id", (req, res) => {
-  const { fecha_nacimiento, genero, ciudad_residencia } = req.body;
+  const { fecha_nacimiento, genero, ciudad_residencia } = req.body.userInfo;
   const { id } = req.params;
   mysqlConnection.query(
-    `UPDATE Usuarios SET Fecha_de_nacimiento = ${fecha_nacimiento}, Genero = ${genero}, Ciudad= ${ciudad_residencia} WHERE Id_usuario = ${id}`,
+    `UPDATE Usuarios SET Fecha_de_nacimiento = '${fecha_nacimiento}', Genero = '${genero}', Ciudad= '${ciudad_residencia}' WHERE Id_usuario = ${id}`,
     (err, rows, fields) => {
       if (!err) {
         res.json({ status: "¡Información actualizada!" });

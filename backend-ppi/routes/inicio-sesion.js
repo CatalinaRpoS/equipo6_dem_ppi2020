@@ -5,7 +5,7 @@ const mysqlConnection = require("../db/db");
 
 // Iniciar sesión en Alto Voltaje
 router.post("/iniciar-sesion", (req, res) => {
-  const { email, contrasena } = req.body.loginData;
+  const { email, contrasena } = req.body;
   mysqlConnection.query(
     `SELECT * FROM Usuarios WHERE Email='${email}' AND Contrasena='${contrasena}'`,
     (err, rows, results) => {

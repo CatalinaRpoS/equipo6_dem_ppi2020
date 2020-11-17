@@ -26,7 +26,7 @@ router.post("/olvidaste-contrasena", (req, res) => {
 
 /* Configurar nueva contraseña */
 router.patch("/configura-contrasena/:id", (req, res) => {
-  const { contrasena } = req.body.infoPass;
+  const { contrasena } = req.body;
   const { id } = req.params;
   mysqlConnection.query(
     `UPDATE Usuarios SET Contrasena= '${contrasena}' WHERE Id_usuario = ${id}`,

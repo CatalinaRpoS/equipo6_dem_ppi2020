@@ -4,7 +4,7 @@ const cors = require("cors");
 const ajustes = require("./routes/ajustes");
 const registro = require("./routes/registro");
 const contrasena = require("./routes/contrasena");
-// const familiaviv = require("./routes/familia-y-vivienda");
+const familiaviv = require("./routes/familia-y-vivienda");
 const iniciosesion = require("./routes/inicio-sesion");
 const electrodomesticos = require("./routes/electrodomesticos");
 const test = require("./routes/test");
@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 app.use(ajustes);
 app.use(registro);
 app.use(contrasena);
-// app.use("/api", familiaviv);
+app.use(familiaviv);
 app.use(iniciosesion);
 app.use(electrodomesticos);
 
