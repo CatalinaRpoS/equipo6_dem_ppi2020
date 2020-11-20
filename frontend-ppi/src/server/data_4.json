@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "imagen": "https://image.freepik.com/vector-gratis/bulbo-energia-verde_888996.jpg",
+    "título": "¡Conoce tu consumo promedio de energía!",
+    "href": "/consumo-de-energia"
+  },
+  {
+    "id": "2",
+    "imagen": "https://image.freepik.com/free-vector/hand-saving-coins-piggybank-with-flat-design_23-2147641819.jpg",
+    "título": "¡Conoce las mejores estrategias de ahorro en tu hogar!",
+    "href": "/estrategias-ahorro"
+  }
+]
