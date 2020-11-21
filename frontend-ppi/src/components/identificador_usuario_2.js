@@ -4,6 +4,7 @@ import Usuario from "../images/usuario.jpg";
 import swal from "sweetalert2";
 import Axios from "axios";
 import { getFromLocal } from "../functions/localStorage";
+import { removeFromLocal } from "../functions/localStorage";
 
 const IdentificadorUsuario2 = () => {
   const [infoUsuario, setInfoUsuario] = useState({
@@ -20,8 +21,9 @@ const IdentificadorUsuario2 = () => {
   function obtenerInfoUsuario() {
     const id = getFromLocal("id");
     if (id) {
-      Axios.get(`https://ygfev.sse.codesandbox.io/ajustes/${id}`).then(
+      Axios.get(`https://altovoltaje.herokuapp.com/ajustes/${id}`).then(
         (response) => {
+          console.log(response);
           let info = response.data[0];
           setInfoUsuario(info);
         }
@@ -45,11 +47,12 @@ const IdentificadorUsuario2 = () => {
         if (resultado.value) {
           const id = getFromLocal("id");
           if (id) {
-            Axios.delete(`https://ygfev.sse.codesandbox.io/ajustes/${id}`).then(
-              (response) => {
-                window.location.href = "/";
-              }
-            );
+            Axios.delete(
+              `https://altovoltaje.herokuapp.com/ajustes/${id}`
+            ).then((response) => {
+              removeFromLocal("id");
+              window.location.href = "/";
+            });
           }
         }
       });

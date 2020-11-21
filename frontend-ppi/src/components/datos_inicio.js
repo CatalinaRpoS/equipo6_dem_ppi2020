@@ -20,7 +20,7 @@ const DatosInicio = (props) => {
   const iniciarSesion = (event) => {
     event.preventDefault();
     axios
-      .post("https://ygfev.sse.codesandbox.io/iniciar-sesion", {
+      .post("https://altovoltaje.herokuapp.com/iniciar-sesion", {
         email: loginData.email,
         contrasena: sha1(loginData.contrasena)
       })
@@ -29,8 +29,10 @@ const DatosInicio = (props) => {
         if (res.data.message === "Info incorrecta") {
           swal.fire({
             title: "Correo y/o contraseña incorrectos",
+            text: "Por favor intenta otra vez",
             icon: "error",
-            confirmButtonText: "Por favor prueba otra vez",
+            confirmButtonText: "¡Entendido!",
+            //confirmButtonText: "Por favor prueba otra vez",
             confirmButtonColor: "#f96332"
           });
         } else {

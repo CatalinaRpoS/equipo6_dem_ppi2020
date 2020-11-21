@@ -19,6 +19,14 @@ body {
   -o-background-size: cover;
   min-height: 100vh;
 }
+
+#pantalla_3 {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* min-height: 100vh; */
+}
 #titulo_1 {
   color: #f8ebe7;
   font-size: calc(3rem + 5vw);
@@ -98,6 +106,15 @@ table {
 .texto_5:hover {
   text-decoration: none;
   color: white;
+}
+
+.texto_6 {
+  font-family: Montserrat;
+  color: #856404;
+}
+.texto_6:hover {
+  color: #856404;
+  text-decoration: none;
 }
 #button_1 {
   border-radius: 50px;
@@ -202,6 +219,10 @@ footer {
   color: #212529;
 }
 
+#button_4 {
+  border-color: transparent;
+}
+
 .button_transparente {
   background-color: transparent;
   border-color: transparent;
@@ -228,6 +249,11 @@ footer {
 }
 
 .img_3 {
+  width: 100vw;
+  max-height: 60vh;
+}
+
+.img_4 {
   width: 100vw;
   max-height: 60vh;
 }
@@ -260,6 +286,57 @@ label {
 
 .hr_color {
   background-color: white;
+}
+
+.btn-padding {
+  margin-bottom: 1vh;
+}
+
+.text-padding {
+  margin-left: 1vh;
+  display: inline;
+}
+
+#text-mayus {
+  text-transform: uppercase;
+}
+
+.btn-display {
+  display: inline-block;
+  align-items: left;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1024px) {
+  .card-tamano {
+    width: 32vh;
+  }
+  .map-junto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-tamano {
+    width: 80vh;
+  }
+  .map-junto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .img_4 {
+    padding: 0 150px;
+  }
+}
+
+.map-junto {
+  /* border-radius: 15px; */
+  display: grid;
+  grid-gap: 1px;
+  grid-auto-columns: minmax(10px, auto);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.card-tam {
+  max-height: 50vh;
 }
 
 /*

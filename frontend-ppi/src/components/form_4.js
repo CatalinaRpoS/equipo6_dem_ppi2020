@@ -34,7 +34,7 @@ const Form4 = () => {
           const id = getFromLocal("id");
           if (id) {
             axios
-              .patch(`https://ygfev.sse.codesandbox.io/ajustes/${id}`, {
+              .patch(`https://altovoltaje.herokuapp.com/ajustes/${id}`, {
                 userInfo
               })
               .then((res) => {

@@ -5,22 +5,7 @@ import axios from "axios";
 import { getFromLocal } from "../functions/localStorage";
 
 const Form2 = (props) => {
-  const [electrodomesticos, setElectrodomesticos] = useState({
-    nevera: 0,
-    lavadora: 0,
-    televisor: 0,
-    licuadora: 0,
-    horno: 0,
-    olla: 0,
-    ventilador: 0,
-    plancha: 0,
-    secador: 0,
-    bombillos: 0,
-    sanduchera: 0,
-    fogon: 0,
-    celular: 0,
-    computador: 0
-  });
+  const [electrodomesticos, setElectrodomesticos] = useState({});
 
   function updateElectro(e) {
     let name = e.target.name;
@@ -47,7 +32,7 @@ const Form2 = (props) => {
         if (resultado.value) {
           const id = getFromLocal("id");
           axios
-            .post(`https://ygfev.sse.codesandbox.io/${id}`, {
+            .post(`https://altovoltaje.herokuapp.com/electrodomesticos/${id}`, {
               electrodomesticos
             })
             .then((res) => {
@@ -71,7 +56,7 @@ const Form2 = (props) => {
         A continuación, debes escribir las horas diarias de uso que se le da en
         tu hogar a cada uno de los siguientes electrodomésticos o aparatos
         eléctricos. Recuerda tener en cuenta a todos los miembros de tu familia
-        y apegarte lo más posible a los gastos.
+        y apegarte lo más posible a la realidad.
       </div>
       <br />
       <form onSubmit={guardar}>
@@ -83,6 +68,7 @@ const Form2 = (props) => {
             <input
               name="nevera"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -95,6 +81,7 @@ const Form2 = (props) => {
             <input
               name="lavadora"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -110,6 +97,7 @@ const Form2 = (props) => {
             <input
               name="televisor"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -122,6 +110,7 @@ const Form2 = (props) => {
             <input
               name="licuadora"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -139,6 +128,7 @@ const Form2 = (props) => {
               type="number"
               className="input_2 form-control"
               id="input1"
+              step="0.01"
               placeholder="0"
               required
               onChange={updateElectro}
@@ -149,6 +139,7 @@ const Form2 = (props) => {
             <input
               name="olla"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -164,6 +155,7 @@ const Form2 = (props) => {
             <input
               name="ventilador"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -176,6 +168,7 @@ const Form2 = (props) => {
             <input
               name="plancha"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -191,6 +184,7 @@ const Form2 = (props) => {
             <input
               name="secador"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -203,6 +197,7 @@ const Form2 = (props) => {
             <input
               name="bombillos"
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -217,6 +212,7 @@ const Form2 = (props) => {
             <label for="input1">Sanduchera</label>
             <input
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -229,6 +225,7 @@ const Form2 = (props) => {
             <label for="input1">Fogón de luz</label>
             <input
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -246,6 +243,7 @@ const Form2 = (props) => {
             </label>
             <input
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"
@@ -258,6 +256,7 @@ const Form2 = (props) => {
             <label for="input1">Computador (conectado a la energía)</label>
             <input
               type="number"
+              step="0.01"
               className="input_2 form-control"
               id="input1"
               placeholder="0"

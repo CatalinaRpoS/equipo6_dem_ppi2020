@@ -1,18 +1,17 @@
 import React from "react";
 import "../styles/styles.css";
 
-class ImagenTitulo2 extends React.Component {
-  render() {
+const ImagenTitulo2=(props)=>{ 
     return (
       <div>
         <div
           className="cont-imagen"
-          style={{ backgroundImage: `url(${this.props.imagen})` }}
+          style={{ backgroundImage: `url(${props.imagen})` }}
         >
           <br />
           <div className="container-fluid">
             <p className="texto_arriba text-center font-weight-bold">
-              {this.props.texto}
+              {props.texto}
             </p>
             <br />
           </div>
@@ -20,6 +19,6 @@ class ImagenTitulo2 extends React.Component {
       </div>
     );
   }
-}
+
 
 export default ImagenTitulo2;

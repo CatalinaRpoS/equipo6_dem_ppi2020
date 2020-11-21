@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/styles.css";
 import Foto2 from "../images/wallpaper-2.png";
 
-class NavbarVacio extends React.Component {
-  render() {
+const NavbarVacio =()=> {
     return (
       <div>
         <nav
@@ -15,6 +14,6 @@ class NavbarVacio extends React.Component {
       </div>
     );
   }
-}
+
 
 export default NavbarVacio;

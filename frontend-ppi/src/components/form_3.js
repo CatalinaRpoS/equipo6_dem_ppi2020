@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/styles.css";
 import swal from "sweetalert2";
+import axios from "axios";
+import { getFromLocal } from "../functions/localStorage";
 
-function Form3() {
+const Form3 = () => {
+  const [familyInfo, setFamilyInfo] = useState();
+
+  function updateInfo(e) {
+    let name = e.target.name;
+    let value = e.target.value;
+    setFamilyInfo({
+      ...familyInfo,
+      [name]: value
+    });
+  }
+
   const guardar = (event) => {
+    console.log(familyInfo);
     event.preventDefault();
     swal
       .fire({
-        title: "¿Estás seguro de agregar esta información adicional?",
+        title: "¿Estás seguro de guardar esta información?",
         icon: "warning",
         confirmButtonText: "Sí",
         cancelButtonText: "No",
@@ -17,12 +31,35 @@ function Form3() {
       })
       .then((resultado) => {
         if (resultado.value) {
-          swal.fire({
-            title: "¡La información fue agregada correctamente!",
-            icon: "success",
-            confirmButtonText: "¡Entendido!",
-            confirmButtonColor: "#f96332"
-          });
+          const id = getFromLocal("id");
+          if (id) {
+            axios
+              .post(
+                `https://altovoltaje.herokuapp.com/familia-y-vivienda-2/${id}`,
+                { familyInfo }
+              )
+              .then((res) => {
+                console.log(res);
+                if (
+                  res.data.message === "Respuestas correctas" ||
+                  res.data.message === "Respuestas correctas 2"
+                ) {
+                  swal.fire({
+                    title: "¡La información se guardó correctamente!",
+                    icon: "success",
+                    confirmButtonText: "¡Entendido!",
+                    confirmButtonColor: "#f96332"
+                  });
+                } else {
+                  swal.fire({
+                    title: "¡La información no se pudo guardar!",
+                    icon: "error",
+                    confirmButtonText: "¡Entendido!",
+                    confirmButtonColor: "#f96332"
+                  });
+                }
+              });
+          }
         }
       });
   };
@@ -34,9 +71,11 @@ function Form3() {
             <div class="form-group rounded">
               <label for="exampleFormControlSelect1">Comuna</label>
               <select
+                name="comuna"
                 className="form-control selectBox"
                 id="exampleFormControlSelect1"
                 required
+                onChange={updateInfo}
               >
                 <option value="">Escoge una opción</option>
                 <option>Comuna 1 - Popular</option>
@@ -70,9 +109,11 @@ function Form3() {
                 Empresa prestadora de servicios públicos
               </label>
               <select
+                name="empresa"
                 className="form-control selectBox"
                 id="exampleFormControlSelect1"
                 required
+                onChange={updateInfo}
               >
                 <option value="">Escoge una opción</option>
                 <option>EPM</option>
@@ -85,9 +126,11 @@ function Form3() {
                 ¿Tu servicio de energía es prepago o pospago?
               </label>
               <select
+                name="servicio"
                 className="form-control selectBox"
                 id="exampleFormControlSelect1"
                 required
+                onChange={updateInfo}
               >
                 <option value="">Escoge una opción</option>
                 <option>Prepago - Recargas con tarjeta antes de usar</option>
@@ -110,6 +153,6 @@ function Form3() {
       </form>
     </div>
   );
-}
+};
 
 export default Form3;

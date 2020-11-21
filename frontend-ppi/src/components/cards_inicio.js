@@ -7,8 +7,8 @@ const CardsInicio = (props) => {
       <div className="row">
         <div className="col">
           <br />
-          {Data2.map((dato) => (
-            <div className="border rounded media card_inicio">
+          {Data2.map((dato, index) => (
+            <div className="border rounded media card_inicio" key={index}>
               <img className="img_2 rounded mr-3" src={dato.imagen} alt="..." />
               <table>
                 <tbody>

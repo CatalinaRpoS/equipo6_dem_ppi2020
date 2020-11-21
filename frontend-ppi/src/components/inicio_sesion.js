@@ -3,7 +3,7 @@ import "../styles/styles.css";
 import axios from "axios";
 import swal from "sweetalert2";
 import { saveToLocal } from "../functions/localStorage";
-import sha1 from 'sha1';
+import sha1 from "sha1";
 
 const InicioSesion = () => {
   const [loginData, setLoginData] = useState({});
@@ -19,14 +19,19 @@ const InicioSesion = () => {
   const iniciarSesion = (event) => {
     event.preventDefault();
     axios
-      .post("https://ygfev.sse.codesandbox.io/iniciar-sesion", { email: loginData.email, contrasena:sha1(loginData.contrasena) })
+      .post("https://altovoltaje.herokuapp.com/iniciar-sesion", {
+        email: loginData.email,
+        contrasena: sha1(loginData.contrasena)
+      })
       .then((res) => {
         console.log(res);
         if (res.data.message === "Info incorrecta") {
           swal.fire({
             title: "Correo y/o contraseña incorrectos",
+            text: "Por favor intenta otra vez",
             icon: "error",
-            confirmButtonText: "Por favor prueba otra vez",
+            confirmButtonText: "¡Entendido!",
+            //confirmButtonText: "Por favor prueba otra vez",
             confirmButtonColor: "#f96332"
           });
         } else {

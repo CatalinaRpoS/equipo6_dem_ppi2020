@@ -8,5 +8,8 @@ export const saveToLocal = (key, value) => {
 // /Profe,nosotros tenemos un back nuevo, este es el enlace:
 // https://codesandbox.io/s/alto-voltaje-backend-db1bo?file=/routes/registro.js
 
-
 export const getFromLocal = (key) => window.localStorage.getItem(key);
+
+export const removeFromLocal = (key) => {
+  window.localStorage.removeItem(key);
+};

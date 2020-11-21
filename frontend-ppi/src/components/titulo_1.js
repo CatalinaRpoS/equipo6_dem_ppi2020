@@ -1,8 +1,7 @@
 import React from "react";
 import "../styles/styles.css";
 
-class Titulo1 extends React.Component {
-  render() {
+const Titulo1 =()=>{
     return (
       <div className="container-fluid">
         <div className="row">
@@ -13,6 +12,6 @@ class Titulo1 extends React.Component {
       </div>
     );
   }
-}
+
 
 export default Titulo1;

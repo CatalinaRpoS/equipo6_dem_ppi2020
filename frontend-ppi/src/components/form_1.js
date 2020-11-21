@@ -35,11 +35,15 @@ const Form1 = () => {
           if (id) {
             axios
               .post(
-                `https://ygfev.sse.codesandbox.io/familia-y-vivienda/${id}`,
+                `https://altovoltaje.herokuapp.com/familia-y-vivienda/${id}`,
                 { familyInfo }
               )
               .then((res) => {
-                if (res.data.message === "Respuestas correctas") {
+                console.log(res);
+                if (
+                  res.data.message === "Respuestas correctas" ||
+                  res.data.message === "Respuestas correctas 2"
+                ) {
                   swal.fire({
                     title: "¡La información se guardó correctamente!",
                     icon: "success",
@@ -59,6 +63,7 @@ const Form1 = () => {
         }
       });
   };
+
   return (
     <div className="container-fluid">
       <form onSubmit={guardar}>
@@ -123,10 +128,13 @@ const Form1 = () => {
             </div>
             <br />
             <div className="row">
-              <div className="col-md-3 col-sm-3 col-lg-3"></div>
-              <div className="col-md-3 col-sm-3 col-lg-3"></div>
+              <div className="col-md-6 col-sm-6 col-lg-6"></div>
               <div className="col-md-6 col-sm-6 col-lg-6">
-                <button type="submit" className="btn w-100" id="button_1">
+                <button
+                  type="submit"
+                  className="btn w-100 btn-padding"
+                  id="button_1"
+                >
                   <span className="texto_1">Guardar</span>
                 </button>
               </div>

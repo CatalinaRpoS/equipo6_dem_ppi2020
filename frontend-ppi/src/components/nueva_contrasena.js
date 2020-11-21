@@ -36,7 +36,7 @@ const NuevaContrasena = () => {
         if (id) {
           axios
             .patch(
-              `https://ygfev.sse.codesandbox.io/configura-contrasena/${id}`,
+              `https://altovoltaje.herokuapp.com/configura-contrasena/${id}`,
               {
                 contrasena: sha1(infoPass.contrasena)
               }

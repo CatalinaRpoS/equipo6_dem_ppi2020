@@ -23,18 +23,19 @@ const Registro = () => {
 
     const { contrasena, contrasena2 } = userData;
     if (contrasena.length < 8) {
-      //if (contrasena.length < 8) {
       swal.fire({
         title: "La contraseña es muy corta :(",
+        text: "Por favor intenta otra vez",
         icon: "error",
-        confirmButtonText: "Por favor prueba otra vez",
+        confirmButtonText: "¡Entendido!",
+        //confirmButtonText: "Por favor prueba otra vez",
         confirmButtonColor: "#f96332"
       });
     } else {
       if (contrasena === contrasena2) {
         //ENVIAR LOS DATOS PARA LA BASE DE DATOS EN ESTE BLOQUE
         axios
-          .post("https://ygfev.sse.codesandbox.io/registro", {
+          .post("https://altovoltaje.herokuapp.com/registro", {
             documento: userData.documento,
             nombre: userData.nombre,
             email: userData.email,
@@ -63,8 +64,10 @@ const Registro = () => {
       } else {
         swal.fire({
           title: "Las contraseñas no coinciden",
+          text: "Por favor intenta otra vez",
           icon: "error",
-          confirmButtonText: "Por favor prueba otra vez",
+          confirmButtonText: "¡Entendido!",
+          //confirmButtonText: "Por favor prueba otra vez",
           confirmButtonColor: "#f96332"
         });
       }

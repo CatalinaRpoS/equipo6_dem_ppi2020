@@ -19,7 +19,7 @@ const RecuperarContrasena = () => {
   const confirmar = (event) => {
     event.preventDefault();
     axios
-      .post("https://ygfev.sse.codesandbox.io/olvidaste-contrasena", {
+      .post("https://altovoltaje.herokuapp.com/olvidaste-contrasena", {
         userData
       })
       .then((res) => {

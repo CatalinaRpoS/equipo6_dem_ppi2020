@@ -16,7 +16,7 @@ const IdentificadorUsuario = () => {
   function obtenerInfoUsuario() {
     const id = getFromLocal("id");
     if (id) {
-      Axios.get(`https://ygfev.sse.codesandbox.io/inicio/${id}`).then(
+      Axios.get(`https://altovoltaje.herokuapp.com/inicio/${id}`).then(
         (response) => {
           let info = response.data[0];
           setInfoUsuario(info);
