@@ -3,9 +3,12 @@ import "../styles/styles.css";
 import swal from "sweetalert2";
 import axios from "axios";
 import { saveToLocal } from "../functions/localStorage";
+import Titulo2 from "../components/titulo_2";
+import Loading from "../components/loading";
 
 const RecuperarContrasena = () => {
   const [userData, setUserData] = useState({});
+  const [loading, setLoading ] = useState(false);
 
   function updateUserData(e) {
     let name = e.target.name;
@@ -16,13 +19,19 @@ const RecuperarContrasena = () => {
     });
   }
 
+  if(loading){
+    return <Loading/>
+  }
+
   const confirmar = (event) => {
     event.preventDefault();
+    setLoading(true);
     axios
       .post("https://altovoltaje.herokuapp.com/olvidaste-contrasena", {
         userData
       })
       .then((res) => {
+        setLoading(false);
         console.log(res);
         if (res.data.message === "Usuario no confirmado") {
           swal.fire({
@@ -33,6 +42,7 @@ const RecuperarContrasena = () => {
             confirmButtonColor: "#f96332"
           });
         } else {
+          setLoading(false);
           const { Id_usuario } = res.data.rows[0];
           saveToLocal("id", Id_usuario);
           swal
@@ -53,6 +63,9 @@ const RecuperarContrasena = () => {
   };
   return (
     <div className="container-fluid">
+      <Titulo2 titulo="¿Olvidaste tu Contraseña?" />
+        <br />
+        <br />
       <div className="row">
         <div className="col text-center">
           <p className="texto_1">

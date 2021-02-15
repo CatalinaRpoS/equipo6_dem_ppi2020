@@ -4,9 +4,12 @@ import swal from "sweetalert2";
 import { getFromLocal } from "../functions/localStorage";
 import axios from "axios";
 import sha1 from "sha1";
+import Titulo2 from "../components/titulo_2";
+import Loading from "../components/loading";
 
 const NuevaContrasena = () => {
   const [infoPass, setInfoPass] = useState({});
+  const [loading, setLoading] = useState(false);
 
   function updatePass(e) {
     let name = e.target.name;
@@ -17,12 +20,17 @@ const NuevaContrasena = () => {
     });
   }
 
+  if(loading){
+    return <Loading/>
+  }
+
   const crear = (event) => {
     event.preventDefault();
-
+    setLoading(true);
     const { contrasena, contrasena2 } = infoPass;
 
     if (contrasena.length < 8) {
+      setLoading(false);
       swal.fire({
         title: "La contraseña es muy corta :(",
         text: "Por favor prueba otra vez",
@@ -42,6 +50,7 @@ const NuevaContrasena = () => {
               }
             )
             .then((res) => {
+              setLoading(false);
               console.log(res);
               swal
                 .fire({
@@ -62,6 +71,7 @@ const NuevaContrasena = () => {
         }
         //ENVIAR LOS DATOS PARA LA BASE DE DATOS EN ESTE BLOQUE
       } else {
+        setLoading(false);
         swal.fire({
           title: "Las contraseñas no coinciden",
           icon: "error",
@@ -73,6 +83,9 @@ const NuevaContrasena = () => {
   };
   return (
     <div className="container-fluid">
+      <Titulo2 titulo="Configura tu Nueva Contraseña" />
+        <br />
+        <br />
       <div className="row">
         <div className="col text-center">
           <p className="texto_1">

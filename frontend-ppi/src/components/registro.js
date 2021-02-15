@@ -5,9 +5,12 @@ import swal from "sweetalert2";
 import axios from "axios";
 import { saveToLocal } from "../functions/localStorage";
 import sha1 from "sha1";
+import Loading from "./loading";
+import Titulo2 from "../components/titulo_2";
 
 const Registro = () => {
   const [userData, setUserData] = useState({});
+  const [loading, setLoading ] = useState(false);
 
   function updateData(e) {
     let name = e.target.name;
@@ -18,11 +21,17 @@ const Registro = () => {
     });
   }
 
+  if(loading){
+    return <Loading/>
+  }
+
   function crearUsuario(event) {
     event.preventDefault();
+    setLoading(true);
 
     const { contrasena, contrasena2 } = userData;
     if (contrasena.length < 8) {
+      setLoading(false);
       swal.fire({
         title: "La contraseña es muy corta :(",
         text: "Por favor intenta otra vez",
@@ -42,6 +51,7 @@ const Registro = () => {
             contrasena: sha1(userData.contrasena)
           })
           .then((res) => {
+            setLoading(false);
             console.log(res);
             const { insertId } = res.data.results;
             saveToLocal("id", insertId);
@@ -62,6 +72,7 @@ const Registro = () => {
             console.log(error);
           });
       } else {
+        setLoading(false);
         swal.fire({
           title: "Las contraseñas no coinciden",
           text: "Por favor intenta otra vez",
@@ -76,6 +87,9 @@ const Registro = () => {
 
   return (
     <div className="container">
+      <Titulo2 titulo="Regístrate" />
+      <br />
+      <br />
       <form onSubmit={crearUsuario}>
         <div className="row">
           <div className="col-12 col-md-6 offset-md-3">
