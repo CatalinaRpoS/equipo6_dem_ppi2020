@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "../styles/styles.css";
 import axios from "axios";
+import Titulo1 from '../components/titulo_1';
 import swal from "sweetalert2";
 import { saveToLocal } from "../functions/localStorage";
 import sha1 from "sha1";
+import Loading from "./loading";
 
 const InicioSesion = () => {
   const [loginData, setLoginData] = useState({});
+  const [loading, setLoading ] = useState(false);
 
   function updateLoginData(e) {
     let name = e.target.name;
@@ -16,14 +19,21 @@ const InicioSesion = () => {
       [name]: value
     });
   }
+
+  if(loading){
+    return <Loading/>
+  }
+
   const iniciarSesion = (event) => {
     event.preventDefault();
+    setLoading(true);
     axios
       .post("https://altovoltaje.herokuapp.com/iniciar-sesion", {
         email: loginData.email,
         contrasena: sha1(loginData.contrasena)
       })
       .then((res) => {
+        setLoading(false);
         console.log(res);
         if (res.data.message === "Info incorrecta") {
           swal.fire({
@@ -43,6 +53,8 @@ const InicioSesion = () => {
   };
   return (
     <div className="container-fluid">
+      <Titulo1/>
+        <br/>
       <form onSubmit={iniciarSesion}>
         <div className="row">
           <div className="col-md-3 col-sm-3 col-lg-3"></div>

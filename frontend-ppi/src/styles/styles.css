@@ -339,6 +339,22 @@ label {
   max-height: 50vh;
 }
 
+.spinPadre {
+  height: 100vh;
+  position: relative;
+  background-color: #f4e2da;
+}
+
+.spinHijo {
+  color: #ed6d44;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /*
 divInputIco {
   background-image: url(https://image.flaticon.com/icons/png/512/310/310869.png);
