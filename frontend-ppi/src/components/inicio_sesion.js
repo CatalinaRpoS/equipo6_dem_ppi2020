@@ -33,9 +33,9 @@ const InicioSesion = () => {
         contrasena: sha1(loginData.contrasena)
       })
       .then((res) => {
-        setLoading(false);
         console.log(res);
         if (res.data.message === "Info incorrecta") {
+          setLoading(false);
           swal.fire({
             title: "Correo y/o contraseña incorrectos",
             text: "Por favor intenta otra vez",
@@ -46,6 +46,7 @@ const InicioSesion = () => {
           });
         } else {
           const { Id_usuario } = res.data.rows[0];
+          setLoading(false);
           saveToLocal("id", Id_usuario);
           window.location.href = "/inicio";
         }

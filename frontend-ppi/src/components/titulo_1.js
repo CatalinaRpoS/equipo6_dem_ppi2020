@@ -3,7 +3,7 @@ import "../styles/styles.css";
 
 const Titulo1 =()=>{
     return (
-      <div className="container-fluid">
+      <div>
         <div className="row">
           <div className="col">
             <p id="titulo_1">Alto Voltaje</p>
