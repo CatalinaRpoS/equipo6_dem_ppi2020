@@ -1,41 +1,44 @@
 import React, { useState } from "react";
 import "../styles/styles.css";
 import swal from "sweetalert2";
-import axios from "axios";
+import Axios from "axios";
 
 const CampoSoporte1 = (props) => {
-  const [mensaje, setMensaje] = useState("");
+  const [infoMensaje, setInfoMensaje] = useState({});
 
-  const updateMensaje = (e) => {
+  function updateMensaje(e) {
     let name = e.target.name;
     let value = e.target.value;
-    setMensaje((name = value));
-  };
+    setInfoMensaje({
+      ...infoMensaje,
+      [name]: value
+    });
+  }
 
   function enviar(event) {
     event.preventDefault();
-    axios
-      .post("https://altovoltaje.herokuapp.com/enviar-mensaje", mensaje)
-      .then((res) => {
-        if (res.data.message === "¡El mensaje se guardó correctamente!") {
-          swal.fire({
-            title: "¡Tu mensaje se envió correctamente!",
-            text:
-              "Muchas gracias por ayudar al proceso de desarrollo de Alto Voltaje",
-            icon: "success",
-            confirmButtonText: "¡Entendido!",
-            confirmButtonColor: "#f96332"
-          });
-        } else {
-          swal.fire({
-            title: "¡Tu mensaje no se pudo enviar!",
-            text: "Por favor, intenta otra vez",
-            icon: "error",
-            confirmButtonText: "¡Entendido!",
-            confirmButtonColor: "#f96332"
-          });
-        }
-      });
+    Axios.post("https://altovoltaje.herokuapp.com/enviar-mensaje", {
+      infoMensaje
+    }).then((res) => {
+      if (res.data.message === "¡El mensaje se guardó correctamente!") {
+        swal.fire({
+          title: "¡Tu mensaje se envió correctamente!",
+          text:
+            "Muchas gracias por ayudar al proceso de desarrollo de Alto Voltaje",
+          icon: "success",
+          confirmButtonText: "¡Entendido!",
+          confirmButtonColor: "#f96332"
+        });
+      } else {
+        swal.fire({
+          title: "¡Tu mensaje no se pudo enviar!",
+          text: "Por favor, intenta otra vez",
+          icon: "error",
+          confirmButtonText: "¡Entendido!",
+          confirmButtonColor: "#f96332"
+        });
+      }
+    });
   }
 
   return (
@@ -45,11 +48,13 @@ const CampoSoporte1 = (props) => {
           <div className="col-md-3 col-sm-3 col-lg-3"></div>
           <div className="col-md-6 col-sm-6 col-lg-6">
             <input
+              name="nombre"
               type="text"
               className="form-control"
               id="iniciar"
               placeholder={props.input1}
               required
+              onChange={updateMensaje}
             />
           </div>
           <div className="col-md-3 col-sm-3 col-lg-3"></div>
@@ -58,11 +63,13 @@ const CampoSoporte1 = (props) => {
           <div className="col-md-3 col-sm-3 col-lg-3"></div>
           <div className="col-md-6 col-sm-6 col-lg-6">
             <input
+              name="email"
               type="email"
               className="form-control"
               id="iniciar"
               placeholder={props.input2}
               required
+              onChange={updateMensaje}
             />
           </div>
           <div className="col-md-3 col-sm-3 col-lg-3"></div>
