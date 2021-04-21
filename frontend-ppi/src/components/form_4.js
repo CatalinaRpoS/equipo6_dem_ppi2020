@@ -51,10 +51,10 @@ const Form4 = () => {
       });
   };
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
         <div className="col">
-          <h4 className="texto_3 font-weight-bold">
+          <h4 className="texto_3 font-weight-bold text-center">
             <br />
             COMPLETAR INFORMACIÓN PERSONAL:
           </h4>

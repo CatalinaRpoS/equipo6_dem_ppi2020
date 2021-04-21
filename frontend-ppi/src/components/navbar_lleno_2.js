@@ -15,7 +15,8 @@ const NavbarLleno2 = () => {
         class="navbar navbar-dark"
         style={{ backgroundImage: `url(${Foto2})` }}
       >
-        <a className="navbar-brand" href="/">
+        <a title="Cerrar sesión"
+        className="navbar-brand" href="/">
           <svg
             width="2em"
             height="2em"

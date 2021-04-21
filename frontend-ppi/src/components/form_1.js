@@ -65,7 +65,7 @@ const Form1 = () => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <form onSubmit={guardar}>
         <div className="row">
           <div className="col">

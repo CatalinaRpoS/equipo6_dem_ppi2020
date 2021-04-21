@@ -23,7 +23,6 @@ const IdentificadorUsuario2 = () => {
     if (id) {
       Axios.get(`https://altovoltaje.herokuapp.com/ajustes/${id}`).then(
         (response) => {
-          console.log(response);
           let info = response.data[0];
           setInfoUsuario(info);
         }

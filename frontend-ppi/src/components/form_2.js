@@ -51,7 +51,7 @@ const Form2 = (props) => {
       });
   };
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="alert alert-warning" role="alert">
         A continuación, debes escribir las horas diarias de uso que se le da en
         tu hogar a cada uno de los siguientes electrodomésticos o aparatos

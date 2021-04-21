@@ -46,7 +46,7 @@ const ConsumoPromedio = () => {
     Precio_diario
   } = infoPromedio;
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
         <div className="col">
           <div className="card-deck">
