@@ -93,7 +93,7 @@ const NuevaContrasena = () => {
           </p>
         </div>
       </div>
-      <form onSubmit={crear}>
+      <form onSubmit={crear} autocomplete="off">
         <div className="row">
           <div className="col-md-3 col-sm-3 col-lg-3"></div>
           <div className="col-md-6 col-sm-6 col-lg-6">

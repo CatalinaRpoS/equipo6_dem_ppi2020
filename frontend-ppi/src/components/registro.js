@@ -90,7 +90,7 @@ const Registro = () => {
       <Titulo2 titulo="Regístrate" />
       <br />
       <br />
-      <form onSubmit={crearUsuario}>
+      <form onSubmit={crearUsuario} autocomplete="off">
         <div className="row">
           <div className="col-12 col-md-6 offset-md-3">
             <input

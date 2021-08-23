@@ -65,7 +65,7 @@ const Form3 = () => {
   };
   return (
     <div className="container">
-      <form onSubmit={guardar}>
+      <form onSubmit={guardar} autocomplete="off">
         <div className="row">
           <div className="col">
             <div class="form-group rounded">

@@ -59,7 +59,7 @@ const Form2 = (props) => {
         y apegarte lo más posible a la realidad.
       </div>
       <br />
-      <form onSubmit={guardar}>
+      <form onSubmit={guardar} autocomplete="off">
         <div className="row">
           <div className="col-md-6 col-sm-6 col-lg-6">
             <label htmlFor="input1">

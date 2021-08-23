@@ -59,7 +59,7 @@ const Form4 = () => {
             COMPLETAR INFORMACIÓN PERSONAL:
           </h4>
           <br />
-          <form onSubmit={actualizar}>
+          <form onSubmit={actualizar} autocomplete="off">
             <div className="col">
               <label className="font-weight-bold" for="input1">
                 Fecha de nacimiento:
